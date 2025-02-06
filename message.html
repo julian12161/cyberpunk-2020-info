@@ -2,71 +2,101 @@
 <html>
     <head>
         <title>Message Mail</title>
+        <link href="mess-style.css" rel="stylesheet" />
     </head>
     <body>
-        <header>
-            <h1>Message Mail</h1>
-        </header>
-        <nav>
-            <ul>
-                <h2>MASTER ENTRY INDEX</h2>
-                <li><a href="/home/julian/projects/aa-projects/website-development/welcome.html">Welcome</a></li>
-                <li><a href="/home/julian/projects/aa-projects/website-development/nightcity.html">Nightcity</a></li>
-                <li><a href="/home/julian/projects/aa-projects/website-development/corporations.html">Corporation Report</a></li>
-                <li><a href="/home/julian/projects/aa-projects/website-development/message.html">Message Mail</a></li>
-            </ul>
-        </nav>
+        <div id="page">
+            <nav>
+                <h2>MASTER<br />ENTRY<br />INDEX</h2>
+                <div id="masterIndex">
+                    <div>
+                        <a href="/home/julian/projects/aa-projects/website-development/welcome.html"><li class="index">Welcome</li></a>
+                    </div>
 
-        <div>
-            <p>DATATERM DISPLAY SYSTEM</p>
-            <p>Topic: Message Mail</p>
-            <div>
-                <img src="/home/julian/projects/aa-projects/website-development/arrow.png" alt="arrow">
-                <div>
-                    <p>UP</p>
-                    <p>DN</p>
+                    <div>
+                        <a href="/home/julian/projects/aa-projects/website-development/nightcity.html"><li class="index">Nightcity</li></a>
+                    </div>
+
+                    <div>
+                        <a href="/home/julian/projects/aa-projects/website-development/corporations.html"><li class="index">Corporation Report</li></a>
+                    </div>
+
+                    <div>
+                        <a href="/home/julian/projects/aa-projects/website-development/message.html"><li class="index">Message Mail</li></a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="main">
+                <header>
+                    <h1>Message Mail</h1>
+                </header>
+
+                <div id="topicBox">
+                    <h4>DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: Message Mail</h5>
+                    <div id=arrowUp>
+                        <img src="arrow.png" id="arrow">
+                        <a href="welcome.html" id="up"><h5>UP</h5></a>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div>
+                        <h3>How to use:</h3>
+                        <p><strong>Message Mail</strong> allows you to leave a message on a dataterm; this message is stored in all dataterms in the city and can only be accessed if the reciepient has a secret 7 letter/number code which you have previously agreed on. You can also post <strong>General Messages</strong> to the Message Mail as well. These messages can be accessed by any dataterm without a seven letter code.</p>
+                        <p>To use Message Mail, you keyboard in your message (no longer than 50 words), and assign it a seven letter/number code (such as HOTSTUF or NETRUN2). The message cannot be retrieved unless the exact code is entered.</p>
+                        <p>If two exact codes are entered into the dataterm, the term accepts the first and tells the second to select a new code. To retrieve a message, you must place a phone debit card with your ID on it into the dataterm, and use the right code word in combination with that ID. Messages are erased after 48 hours.</p>
+                        <p>Most people use several dataterm "blind drops"; they have one code they give to all friends; this drop lists all the codes for other message areas.</p>
+                        <p><strong>Hardcopy</strong> gives you a fax-flimsy of whatever you want, at a cost of .50eb per page</p>
+                    </div>
+                    <form>
+                        <fieldset>
+                            <legend>Message</legend>
+
+                            <div>
+                                <label for="code">Input code:</label>
+                                <input type="text" id="code" name="code" maxlength="7">
+                            </div>
+
+                            <div>
+                                <label for="identity">SIN</label>
+                                <input type="text" id="identity" name="identity">
+                            </div>
+
+                            <div>
+                                <label for="message">Input Message:</label>
+                                <textarea id="message" name="message" maxlength="250" rows="20"></textarea>
+                            </div>
+
+                            <div>
+                                <label for="hardcopy">Hardcopy?</label>
+                                <input type="checkbox" id="hardcopy" name="hardcopy">
+                            </div>
+
+                            <div>
+                                <button type="submit">submit</button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div>
-            <div>
-                <h3>How to use:</h3>
-                <p><class="special">Message Mail</class> allows you to leave a message on a dataterm; this message is stored in all dataterms in the city and can only be accessed if the reciepient has a secret 7 letter/number code which you have previously agreed on. You can also post <class="special">General Messages</class> to the Message Mail as well. These messages can be accessed by any dataterm without a seven letter code.</p>
-                <p>To use Message Mail, you keyboard in your message (no longer than 50 words), and assign it a seven letter/number code (such as HOTSTUF or NETRUN2). The message cannot be retrieved unless the exact code is entered.</p>
-                <p>If two exact codes are entered into the dataterm, the term accepts the first and tells the second to select a new code. To retrieve a message, you must place a phone debit card with your ID on it into the dataterm, and use the right code word in combination with that ID. Messages are erased after 48 hours.</p>
-                <p>Most people use several dataterm "blind drops"; they have one code they give to all friends; this drop lists all the codes for other message areas.</p>
-                <p><class="special">Hardcopy</class> gives you a fax-flimsy of whatever you want, at a cost of .50eb per page</p>
+        <footer>
+            <div id="copyright">
+                <a href="https://talsorianstore.com/collections/cyberpunk/products/cyberpunk-2020"><img id="r-talsor" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/R._Talsorian_Games_logo.svg" alt="R Talsorian Games"></a>
+                <p>&copy</p>
             </div>
-            <form>
-                <fieldset>
-                    <legend>Message</legend>
+            <div>
 
-                    <div>
-                        <label for="code">Input code:</label>
-                        <input type="text" id="code" name="code" maxlength="7">
-                    </div>
+            </div>
 
-                    <div>
-                        <label for="identity">SIN</label>
-                        <input type="text" id="identity" name="identity">
-                    </div>
+            <div>
 
-                    <div>
-                        <label for="message">Input Message:</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
+            </div>
 
-                    <div>
-                        <label for="hardcopy">Hardcopy?</label>
-                        <input type="checkbox" id="hardcopy" name="hardcopy">
-                    </div>
-
-                    <div>
-                        <button type="submit">submit</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+            <a href="https://github.com/julian12161/cyberpunk-2020-info/issues" id="contact">Contact me</a>
+        </footer>
     </body>
 </html>

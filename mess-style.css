@@ -1,3 +1,10 @@
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
 body {
     display:flex;
     flex-direction: column;
@@ -105,6 +112,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
 
 h1 {
@@ -116,55 +124,12 @@ h1 {
     width: stretch;
 }
 
-#nightcorp {
-    display: flex;
-    align-self: center;
-}
-
-#paragraphs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-}
-
-.welPara {
-    height: 100%;
-}
-
-#example {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    text-decoration-style: none;
-    text-align: center;
-    border: 5px groove black;
-    height: 40px;
-    width: 67px;
-    border-radius: 10px;
-    background-color: white;
-    padding: 3% 5%;
-    justify-self: center;
-}
-
-
-#example:hover {
-    border: 5px ridge black;
-    background-color: lightgray;
-}
-
-p {
-    text-wrap: wrap;
-}
-
 #topicBox {
     border: 1px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     justify-self: center;
-    scale: 75%;
-    width: 350px;
+    width: stretch;
     height: 16px;
 }
 
@@ -179,6 +144,7 @@ h4 {
     border: 1px solid black;
     align-self: center;
     justify-self: center;
+    width: 40%;
 }
 
 #topic {
@@ -186,6 +152,11 @@ h4 {
     align-self: center;
     justify-self: center;
     padding-left: 1%;
+    width: 55%;
+}
+
+#arrowUp {
+    display: flex;
 }
 
 #up {
@@ -194,7 +165,7 @@ h4 {
     display: flex;
     align-items: center;
     align-self: center;
-    padding: 1%;
+    padding: 1% 4px;
     height: 20px;
     transition-duration: 0.4s;
     color: black;
@@ -203,31 +174,4 @@ h4 {
 #up:hover {
     background-color: black;
     color: white;
-}
-
-#alsoBox {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    scale: 75%;
-    width: 120px;
-    height: 16px;
-}
-
-#arrowStretch {
-    height: 16px;
-    width: 42px;
-}
-
-#buttonLink {
-    border: 1px solid black;
-    height: 24px;
-    width: 18px;
-    background-color: white;
-    transition-duration: 0.4s;
-}
-
-#buttonLink:hover {
-    background-color: black;
 }
