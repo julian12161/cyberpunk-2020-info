@@ -71,7 +71,7 @@ h2 { /* Master entry index */
     padding: 15px;
 }
 
-.index {
+.index { /* nav button */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +84,8 @@ h2 { /* Master entry index */
     margin: 24% 0;
     border-radius: 10px;
     background-color: white;
+    color: black;
+    font-weight: bold;
     padding: 3% 5%;
 }
 
@@ -137,9 +139,9 @@ h1 {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    text-decoration-style: none;
     text-align: center;
     border: 5px groove black;
+    font-weight: bold;
     height: 40px;
     width: 67px;
     border-radius: 10px;

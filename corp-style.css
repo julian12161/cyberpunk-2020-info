@@ -79,12 +79,14 @@ h2 { /* Master entry index */
     padding: 15px;
 }
 
-.index {
+.index { /* nav button */
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     text-decoration-style: none;
+    color: black;
+    font-weight: bold;
     text-align: center;
     border: 5px groove black;
     height: 54px;
