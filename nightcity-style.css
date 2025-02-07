@@ -59,7 +59,7 @@ body {
 }
 
 footer {
-    border: 3px solid white;
+    border-top: 1px solid white;
     background-color: black;
     color: red;
     position: static;
@@ -81,7 +81,7 @@ footer {
 }
 
 #r-talsor {
-    height: 48px;
+    height: 47px;
     width: 110px;
 }
 
