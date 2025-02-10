@@ -57,7 +57,7 @@ h2 { /* Master entry index */
     border: 5px groove black;
     height: 54px;
     width: 90px;
-    margin: 24% 0;
+    margin: 17.4% 0;
     border-radius: 10px;
     background-color: white;
     padding: 3% 5%;
@@ -217,4 +217,32 @@ footer {
 #buttonLink:hover {
     background-color: black;
     color: white
+}
+
+details {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+details[open] {
+    border: 1px solid black;
+}
+
+#top {
+    border-top: 1px solid black;
+
+}
+
+#bottom {
+    border-bottom: 1px solid black;
+}
+
+summary {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+#gangs {
+    width: 100%;
 }
