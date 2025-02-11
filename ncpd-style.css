@@ -246,3 +246,23 @@ summary {
 #gangs {
     width: 100%;
 }
+
+.detailed {
+    display: flex;
+}
+
+.low {
+    background-color: limegreen;
+}
+
+.medium {
+    background-color: orange;
+}
+
+.high {
+    background-color: red;
+}
+
+.gangLogo {
+    height: 160px;
+}
