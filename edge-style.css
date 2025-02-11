@@ -78,7 +78,7 @@ a {
 /* header */
 #main {
     padding: 0 0;
-    height: 100%;
+    height: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -175,6 +175,10 @@ footer {
 }
 
 /* content */
+#content {
+    height: 100%;
+}
+
 #alsoBox {
     border: 1px solid black;
     display: flex;
