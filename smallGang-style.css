@@ -1,0 +1,180 @@
+#page { /* Everything but Footer */
+    display: flex;
+    margin: 0;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: monospace;
+}
+
+/* navigation bar */
+nav { /* h2 and below */
+    flex-direction: column;
+    align-content: space-between;
+    margin: 0;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    border: 2px solid black;
+}
+
+h2 { /* Master entry index */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 200px;
+    width: stretch;
+    height: 20%;
+    margin: 0;
+    background-color: #020100;
+    color: white;
+    border: 3px solid white;
+}
+
+#masterIndex { /* nav button container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 100%;
+    width: 110px;
+    padding: 15px;
+}
+
+.index { /* nav button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration-style: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: 5px groove black;
+    height: 54px;
+    width: 90px;
+    margin: 17.4% 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 3% 5%;
+}
+
+
+.index:hover {
+    border: 5px ridge black;
+    background-color: lightgray;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* header */
+#main {
+    padding: 0 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
+    background-color: #020100;
+    color: white;
+    margin: 0;
+    padding: 4% 0 4% 1%;
+    border: 3px solid white;
+    width: stretch;
+}
+
+#topicBox {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    justify-self: center;
+    width: stretch;
+    height: 16px;
+}
+
+#arrow {
+    height: 16px;
+    align-self: center;
+    justify-self: center;
+}
+
+.DDS {
+    text-wrap: nowrap;
+    border: 1px solid black;
+    align-self: center;
+    justify-self: center;
+    width: 40%;
+}
+
+#topic {
+    text-wrap: nowrap;
+    align-self: center;
+    justify-self: center;
+    padding-left: 1%;
+    width: 55%;
+}
+
+#arrowUp {
+    display: flex;
+}
+
+#up {
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 1% 4px;
+    height: 20px;
+    transition-duration: 0.4s;
+    color: black;
+}
+
+#up:hover {
+    background-color: black;
+    color: white;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid white;
+    background-color: black;
+    color: red;
+    position: static;
+    bottom: 0;
+    width: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+#contact {
+    color: white;
+}
+
+#copyright {
+    display: flex;
+    flex-direction: row;
+}
+
+#r-talsor {
+    height: 47px;
+    width: 110px;
+}
+
+/* content */
+#content {
+    height: 100%;
+}
