@@ -179,6 +179,43 @@ footer {
     height: 100%;
 }
 
+#threat {
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.threatHead {
+    background-color: black;
+    color: white;
+    margin-top: 0;
+}
+
+#levels {
+    width: 50%;
+    height: 100%;
+}
+
+#codes {
+    width: 50%;
+    height: 100%;
+}
+
 #AA {
     list-style-type: "AA. ";
+}
+
+#allGangs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gang {
+    width: 48%;
+    margin: 0 1%;
+}
+
+h6 {
+    justify-self: center;
 }
