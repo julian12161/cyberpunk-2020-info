@@ -176,93 +176,46 @@ footer {
 
 /* content */
 #content {
+    height: 100%;
+}
+
+#threat {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#logo {
-    height: 50%;
-    width: 50%;
-}
-
-#alsoBox {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    scale: 75%;
-    width: 160px;
-    height: 16px;
-}
-
-#arrowStretch {
-    height: 16px;
-    width: 42px;
-}
-
-#buttonLink {
-    border: 1px solid black;
-    height: 24px;
-    width: 18px;
-    background-color: white;
-    transition-duration: 0.4s;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#buttonLink:hover {
-    background-color: black;
-    color: white
-}
-
-details {
-    border-left: 1px solid black;
+    justify-content: space-between;
     border-right: 1px solid black;
-}
-
-details[open] {
-    border: 1px solid black;
-}
-
-#top {
-    border-top: 1px solid black;
-
-}
-
-#bottom {
     border-bottom: 1px solid black;
 }
 
-summary {
+.threatHead {
     background-color: black;
     color: white;
-    border: 1px solid white;
+    margin-top: 0;
 }
 
-#gangs {
-    width: 100%;
+#levels {
+    width: 50%;
+    height: 100%;
 }
 
-.detailed {
+#codes {
+    width: 50%;
+    height: 100%;
+}
+
+#AA {
+    list-style-type: "AA. ";
+}
+
+#allGangs {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.low {
-    background-color: limegreen;
+.gang {
+    width: 48%;
+    margin: 0 1%;
 }
 
-.medium {
-    background-color: orange;
-}
-
-.high {
-    background-color: red;
-}
-
-.gangLogo {
-    height: 160px;
+h6 {
+    justify-self: center;
 }
