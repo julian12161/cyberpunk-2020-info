@@ -216,6 +216,7 @@ footer {
     margin: 0 1%;
 }
 
-h6 {
-    justify-self: center;
+#report {
+    display: flex;
+    justify-content: center;
 }
