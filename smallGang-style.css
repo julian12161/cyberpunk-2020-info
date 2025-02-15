@@ -214,6 +214,7 @@ footer {
 .gang {
     width: 48%;
     margin: 0 1%;
+    border-bottom: 1px solid black;
 }
 
 #report {
