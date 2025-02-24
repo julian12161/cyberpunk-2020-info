@@ -37,7 +37,8 @@ footer {
     width: 110px;
 }
 
-nav { /* h2 and below */
+/* navigation bar
+nav { /* h2 and below
     flex-direction: column;
     align-content: space-between;
     margin: 0;
@@ -45,6 +46,23 @@ nav { /* h2 and below */
     position: sticky;
     top: 0;
     border: 2px solid black;
+} */
+
+nav {
+    position: fixed; /* Keeps it locked to the left */
+    top: 0;
+    left: 0;
+    width: 11vw; /* 15% of the viewport width, adjust as needed */
+    height: 100vh; /* Full height of the screen */
+    background: linear-gradient(to bottom, #909090, #505050);
+    /*background-image: url('assets/metallic-background.jpg');
+    background-blend-mode: multiply;*/
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-right: 2px solid black; /* Separates from the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
 }
 
 h2 { /* Master entry index */
@@ -53,30 +71,33 @@ h2 { /* Master entry index */
     justify-content: center;
     text-align: center;
     max-height: 200px;
-    width: stretch;
+    width: calc(100% - 6px);
     height: 20%;
     margin: 0;
+    margin-top: 3px;
+    padding: 10px 0;
     background-color: #020100;
     color: white;
-    border: 3px solid white;
 }
 
-#masterIndex { /* nav button container */
+#masterIndex {  /* nav button container */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
     height: 100%;
-    width: 110px;
+    width: stretch;
     padding: 15px;
 }
 
-.index { /* nav button */
+/* .index { // nav button
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     text-decoration-style: none;
+    color: black;
+    font-weight: bold;
     text-align: center;
     border: 5px groove black;
     height: 54px;
@@ -84,8 +105,6 @@ h2 { /* Master entry index */
     margin: 17.4% 0;
     border-radius: 10px;
     background-color: white;
-    color: black;
-    font-weight: bold;
     padding: 3% 5%;
 }
 
@@ -93,6 +112,43 @@ h2 { /* Master entry index */
 .index:hover {
     border: 5px ridge black;
     background-color: lightgray;
+} */
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: 4px solid black;
+    font-size: 14px;
+    height: 50px;
+    width: 80%;
+    min-width: 100px;
+    max-width: 150px;
+    margin: 10px 0;
+    border-radius: 12px; /* More rounded corners */
+    background: linear-gradient(to bottom, #eeeeee, #aaaaaa);
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5); /* Drop shadow for 3D effect */
+    transition: all 0.1s ease-in-out; /* Smooth effect */
+    padding: 3% 5%;
+}
+
+/* Button Press Effect */
+.index:active {
+    background: linear-gradient(to bottom, #888888, #555555); /* Darker when pressed */
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7) inset; /* Inner shadow for "pressed" look */
+    transform: translateY(2px); /* Moves down slightly when clicked */
+}
+
+/* Hover Effect */
+.index:hover {
+    background: linear-gradient(to bottom, #dddddd, #aaaaaa); /* Lightens up */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 }
 
 a {
@@ -101,13 +157,27 @@ a {
     vertical-align: middle;
 }
 
-#main {
+/*#main {
     padding: 0 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}*/
+
+/* header */
+#main {
+    padding: 0 0;
+    padding-left: 2px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 11vw; /* Matches the nav width */
+    width: calc(100% - 11vw); /* Ensures the content doesn’t overlap */
 }
+
 
 h1 {
     background-color: #020100;
