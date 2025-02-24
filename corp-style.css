@@ -61,6 +61,7 @@ nav {
     top: 0;
     left: 0;
     width: 11vw; /* 15% of the viewport width, adjust as needed */
+    min-width: 100px;
     height: 100vh; /* Full height of the screen */
     background: linear-gradient(to bottom, #909090, #505050);
     /*background-image: url('assets/metallic-background.jpg');
@@ -135,7 +136,7 @@ h2 { /* Master entry index */
     font-size: 14px;
     height: 50px;
     width: 80%;
-    min-width: 100px;
+    min-width: 8vw;
     max-width: 150px;
     margin: 10px 0;
     border-radius: 12px; /* More rounded corners */
