@@ -351,7 +351,13 @@ ol, ul {
     text-align: center;
 }
 
-@media (max-width: 800px) {
+.example, .topicBox, .alsoBox {
+    width: 90%;
+    max-width: 618px; /* Keeps it looking good on desktop */
+    margin: 10px auto; /* Ensures they're centered */
+}
+
+@media (max-width: 1000px) {
     nav {
         display: none; /* hide big nav */
     }
@@ -368,6 +374,11 @@ ol, ul {
         flex-direction: column;
         align-items: center; /* Centers child elements horizontally */
         text-align: center;  /* Centers text content */
+    }
+
+    .example, .topicBox, .alsoBox {
+        width: 90%;
+        margin: 10px auto;
     }
 
     header {
