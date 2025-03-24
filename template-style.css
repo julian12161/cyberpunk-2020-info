@@ -114,7 +114,7 @@ h2 { /* Master entry index */
 /* Button Press Effect */
 .index:active {
     background: linear-gradient(to bottom, #888888, #555555); /* Darker when pressed */
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7) inset; /* Inner shadow for "pressed" look */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.7) inset; /* Inner shadow for "pressed" look */
     transform: translateY(2px); /* Moves down slightly when clicked */
 }
 
