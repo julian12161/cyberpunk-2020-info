@@ -66,6 +66,36 @@ nav {
     padding-top: 0;
 }
 
+#mobileNav {
+    display: none; /*hidden by default*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 5px;
+    z-index: 100;
+}
+
+.mobileButton {
+    background: linear-gradient(to bottom, #eeeeee, #aaaaaa);
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.mobile-button:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
 h2 { /* Master entry index */
     display:flex;
     align-items: center;
@@ -308,4 +338,72 @@ h4 {
 #content {
     display: flex;
 
+}
+
+ol, ul {
+    padding-left: 0;  /* Removes default indent */
+    margin-left: 0;
+    list-style-position: inside; /* Keeps bullet/number inside the content box */
+    text-align: center; /* Ensures list text is centered */
+}
+
+.paraHead {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none; /* hide big nav */
+    }
+    #mobileNav {
+        display: grid; /* show grid on mobile */
+        z-index: 100; /* ensure it's on top */
+    }
+    #main {
+        margin-left: 0;
+        width: 100%;
+        padding: none;
+        padding-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers child elements horizontally */
+        text-align: center;  /* Centers text content */
+    }
+
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border: none;
+    }
+
+    #main h1 {
+        align-self: stretch;
+    }
+
+    #paragraphs, .welPara {
+        width: 90%; /* Make text blocks narrower for readability */
+        align-items: center;
+    }
+
+    #nightcorp {
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        position: relative; /* Ensure it's not fixed */
+        width: 100%;
+        margin-bottom: 5px;
+        z-index: 99; /* Less than mobileNav's 100 */
+    }
+
+    /* #copyright {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    } */
 }
