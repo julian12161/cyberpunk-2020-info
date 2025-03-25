@@ -73,7 +73,7 @@ nav {
     left: 0;
     width: 100%;
     background-color: black;
-    padding: 5px;
+    padding: 5px 0;
     grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
     gap: 5px;
     z-index: 100;
@@ -352,9 +352,10 @@ ol, ul {
 }
 
 .example, .topicBox, .alsoBox {
-    width: 90%;
+    padding:0;
+    width: 50%;
     max-width: 618px; /* Keeps it looking good on desktop */
-    margin: 10px auto; /* Ensures they're centered */
+    margin: 20px auto; /* Ensures they're centered */
 }
 
 @media (max-width: 1000px) {
