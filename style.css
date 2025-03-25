@@ -204,7 +204,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 89vw;
+    max-width: 1200px;
     margin-left: 11vw; /* Matches the nav width */
     width: calc(100% - 11vw); /* Ensures the content doesn’t overlap */
 }
@@ -345,6 +346,9 @@ ol, ul {
     margin-left: 0;
     list-style-position: inside; /* Keeps bullet/number inside the content box */
     text-align: center; /* Ensures list text is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .paraHead {
