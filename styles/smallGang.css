@@ -1,0 +1,95 @@
+.DDS {
+    text-wrap: nowrap;
+    border: 1px solid black;
+    align-self: center;
+    justify-self: center;
+    width: 40%;
+}
+
+h4 {
+    width: auto;
+    min-width: 40%;
+}
+
+#content {
+    height: 100%;
+}
+
+#threat {
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.threatHead {
+    background-color: black;
+    color: white;
+    margin-top: 0;
+    width: 100%
+}
+
+#levels {
+    width: 50%;
+    height: 100%;
+}
+
+#codes {
+    width: 50%;
+    height: 100%;
+}
+
+#AA {
+    list-style-type: "AA. ";
+}
+
+#allGangs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.levelA:hover {
+    background-color: #8b0000;
+    text-shadow: 0px 0px 5px #ff6961;
+    color: white;
+}
+
+.levelB:hover {
+    background-color: #ff4500;
+    text-shadow: 0px 0px 5px #f08080;
+    color:white;
+}
+
+.levelC:hover {
+    background-color: #ffbf00;
+    text-shadow: 0px 0px 5px #daa520;
+    color: white;
+}
+
+.levelD:hover {
+    background-color: #b8860b;
+    text-shadow: 0px 0px 5px #f0e68c;
+    color: white;
+}
+
+.levelE:hover {
+    background-color: #808000;
+    text-shadow: 0px 0px 5px #bdb76b;
+    color: white;
+}
+
+.gang {
+    width: 48%;
+    margin: 0 1%;
+    border-bottom: 1px solid black;
+    transition-duration: 0.4s;
+}
+
+.gangText {
+    padding: 0 1%;
+}
+
+#report {
+    display: flex;
+    justify-content: center;
+}

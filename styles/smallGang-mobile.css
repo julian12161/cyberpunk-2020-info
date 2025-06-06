@@ -1,0 +1,48 @@
+@media (max-width: 800px) {
+
+    .levelA:active {
+        background-color: #8b0000;
+        text-shadow: 0px 0px 5px #ff6961;
+        color: white;
+    }
+
+    .levelB:active {
+        background-color: #ff4500;
+        text-shadow: 0px 0px 5px #f08080;
+        color:white;
+    }
+
+    .levelC:active {
+        background-color: #ffbf00;
+        text-shadow: 0px 0px 5px #daa520;
+        color: white;
+    }
+
+    .levelD:active {
+        background-color: #b8860b;
+        text-shadow: 0px 0px 5px #f0e68c;
+        color: white;
+    }
+
+    .levelE:active {
+        background-color: #808000;
+        text-shadow: 0px 0px 5px #bdb76b;
+        color: white;
+    }
+
+    .gang {
+        width: 48%;
+        margin: 0 1%;
+        border-bottom: 1px solid black;
+        transition-duration: 0.4s;
+    }
+
+    .gangText {
+        padding: 0 1%;
+    }
+
+    #report {
+        display: flex;
+        justify-content: center;
+    }
+}

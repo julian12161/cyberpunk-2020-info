@@ -1,0 +1,163 @@
+#map {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-wrap: wrap;
+    height: 414px;
+    width: 618px;
+    margin: 5%;
+    position: relative;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#other {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 414px;
+    margin: 5% 0;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+    height: stretch;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 5% 0;
+}
+
+.otherLocs {
+    list-style-type: none;
+    border: 1px solid black;
+    color: black;
+    transition-duration: 0.4s;
+
+}
+
+.otherLocs:hover {
+    background-color: black;
+    color: white;
+}
+
+.district {
+    position: absolute;
+    padding: 5px 0;
+    z-index: 1;
+    transition-duration: 0.4s;
+}
+
+.district:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+    z-index: 3;
+}
+
+#a1 {
+    left: 6px;
+}
+
+#a2 {
+    left: 107px;
+}
+
+#a3 {
+    left: 207px;
+}
+
+#a4 {
+    left: 308px;
+}
+
+#a5 {
+    left: 401px;
+}
+
+#a6 {
+    left: 473px;
+    top: 2px;
+}
+
+#b1 {
+    left: 7px;
+    top: 121px;
+}
+
+#filler1 {
+    position: absolute;
+    top: 231px;
+    left: 65px;
+}
+
+#filler2 {
+    position: absolute;
+    top: 223px;
+    left: 259px;
+}
+
+#b2 {
+    left: 107px;
+    top: 121px;
+}
+
+#b3 {
+    left: 208px;
+    top: 100px;
+}
+
+#center {
+    left: 149px;
+    top: 167px;
+    z-index: 2;
+}
+
+#b4 {
+    top: 115px;
+    left: 260px;
+}
+
+#b5 {
+    left: 401px;
+    top: 113px;
+}
+
+#b6 {
+    top: 95px;
+    left: 446px;
+}
+
+#c1 {
+    left: 7px;
+    top: 267px;
+}
+
+#c2 {
+    top: 226px;
+    left: 95px;
+}
+
+#c3 {
+    top: 251px;
+    left: 204px;
+}
+
+#c4 {
+    top: 266px;
+    left: 334px;
+}
+
+#c5 {
+    top: 266px;
+    left: 401px;
+}
+
+#c6 {
+    top: 266px;
+    left: 499px;
+}
