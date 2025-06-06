@@ -202,3 +202,10 @@ footer {
     height: 47px;
     width: 110px;
 }
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+}
