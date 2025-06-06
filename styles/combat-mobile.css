@@ -1,0 +1,11 @@
+@media (max-width: 800px) {
+    #topic {
+        display: none;
+    }
+
+    #mobileTopic {
+        display: block;
+        margin-top: 0;
+
+    }
+}
