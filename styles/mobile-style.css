@@ -1,0 +1,82 @@
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    #topicBox {
+        width: 100%;
+    }
+
+    #mobileNav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 5px 0;
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .mobileButton {
+        background: linear-gradient(to bottom, #eeeeee, #aaaaaa);
+        border: 2px solid #000;
+        border-radius: 8px;
+        padding: 10px;
+        color: black;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .mobileButton:hover {
+        background: #ccc;
+        cursor: pointer;
+    }
+
+    #main {
+        margin-left: 0;
+        width: 100%;
+        padding-bottom: 90px;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border: none;
+    }
+
+    #main h1 {
+        align-self: stretch;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        margin-bottom: 5px;
+        z-index: 99;
+    }
+
+    ol, ul {
+        padding-left: 0;
+        margin-left: 0;
+        list-style-position: inside;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,12 @@
+#content {
+    height: 100%;
+}
+
+.warning {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid black;
+    margin: 1px;
+}
