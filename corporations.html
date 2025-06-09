@@ -13,6 +13,7 @@
     <body>
         <div id="page">
             <div id="mobileNav">
+                <button class="mobileButton access-blocked">ACCESS BLOCKED</button>
                 <button class="mobileButton">Welcome</button>
                 <button class="mobileButton">Nightcity</button>
                 <button class="mobileButton">Corporations</button>
@@ -23,6 +24,10 @@
             <nav>
                 <h2>MASTER<br />ENTRY<br />INDEX</h2>
                 <div id="masterIndex">
+                    <div>
+                        <a href="#" onclick="checkAccess()"><li class="index access-blocked">ACCESS BLOCKED</li></a>
+                    </div>
+
                     <div>
                         <a class="navButton" href="index.html"><li class="index">Welcome</li></a>
                     </div>

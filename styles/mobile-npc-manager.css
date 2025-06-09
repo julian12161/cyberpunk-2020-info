@@ -1,0 +1,10 @@
+@media (max-width: 800px) {
+    .npc-card {
+        max-width: 100%;
+    }
+
+    .armor {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+
+}
