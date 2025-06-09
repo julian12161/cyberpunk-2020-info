@@ -1,0 +1,33 @@
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#picBox {
+    max-width: 50%;
+}
+
+#pic {
+    width: 100%;
+}
+
+.roles {
+    width: 50%;
+}
+
+h4 {
+    width: auto;
+}
+
+#runNet {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    transition-duration: 0.4s;
+}
+
+#runNet:hover {
+    background-color: black;
+    color: white;
+}

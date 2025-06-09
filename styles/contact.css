@@ -1,0 +1,40 @@
+#content {
+    flex-direction: column;
+}
+
+#sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.outputBox {
+    border: 1px solid black;
+    padding: 8px;
+    margin-top: 10px;
+    justify-self: center;
+}
+
+.hiddenBorder {
+    border: none;
+    padding: 0;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border: 2px solid lime;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: lime;
+}
+
+label {
+    font-family: monospace;
+    color: black;
+}
