@@ -15,6 +15,21 @@ function addNPC() {
     clone.querySelector('.hp-current').value = "40"; // Ensure starting HP
 
     content.appendChild(clone);
+
+    const nameField = clone.querySelector('h3[contenteditable="true"]');
+
+    // Focus and select all the content
+    nameField.focus();
+
+    // Select text after a slight delay to ensure focus is set
+    setTimeout(() => {
+        const range = document.createRange();
+        range.selectNodeContents(nameField);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+    }, 10);
+
 }
 
 
@@ -55,6 +70,19 @@ function applyDamage(button) {
         spField.value = Math.max(0, sp - 1); // reduces by 1 if hits
     }
 
+    // Prompt death save if conditions are met
+    if (Math.floor(hpField.value) < 28 && effectiveDmg > 0) {
+        const save = parseInt(card.querySelector('.save').value) || 0;
+        const roll = Math.ceil(Math.random() * 10);
+        const deathMod = Math.floor(hpField.value / 4) - 6;
+        const passed = roll <= save + deathMod;
+
+        const log = card.querySelector('.log');
+        const msg = `Death Save: Hit ${location.toUpperCase()} for ${effectiveDmg} (Rolled ${roll} vs ${save}+${deathMod}) → ${passed ? 'PASS' : 'DIED'}`;
+        log.innerHTML += msg + '<br>';
+
+    }
+
     // Prompt Stun Save if conditions are met
     if (dmg > 8 || effectiveDmg > 0) {
         const save = parseInt(card.querySelector('.save').value) || 0;
@@ -62,12 +90,12 @@ function applyDamage(button) {
         const stunMod = Math.floor(hpField.value / 4) - 9;
         const passed = roll <= save + stunMod;
 
-        setTimeout(() => {
-            alert(`Stun Save: You rolled ${roll} vs save ${save + stunMod} (${save} + (${stunMod})). ${passed ? "PASS" : "FAIL"}`);
-        }, 100);
+        // setTimeout(() => {
+        //     alert(`Stun Save: You rolled ${roll} vs save ${save + stunMod} (${save} + (${stunMod})). ${passed ? "PASS" : "FAIL"}`);
+        // }, 100);
 
         const log = card.querySelector('.log');
-        const msg = `Hit ${location.toUpperCase()} for ${effectiveDmg} (Rolled ${roll} vs ${save}+${stunMod}) → ${passed ? 'PASS' : 'FAIL'}`;
+        const msg = `Stun Save: Hit ${location.toUpperCase()} for ${effectiveDmg} (Rolled ${roll} vs ${save}+${stunMod}) → ${passed ? 'PASS' : 'FAIL'}`;
         log.innerHTML += msg + '<br>';
     }
 
