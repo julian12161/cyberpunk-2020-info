@@ -1,10 +1,31 @@
 const buttons = document.querySelectorAll(".mobileButton");
-const links = ["index.html", "nightcity.html", "corporations.html", "message.html", "NCPD.html", "combat.html"];
 
+let prefix;
+if (window.location.pathname.includes("/edgerunners/")) {
+  prefix = "../";
+} else {
+  prefix = './'
+}
+
+const links = [
+  `${prefix}npc-manager.html`,
+  `${prefix}index.html`,
+  `${prefix}nightcity.html`,
+  `${prefix}corporations.html`,
+  `${prefix}message.html`,
+  `${prefix}NCPD.html`,
+  `${prefix}combat.html`
+];
+
+// skip the first button (ACCESS BLOCKED)
 buttons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-        window.location.href = links[i];
-    })
+    if (i === 0) {
+        button.addEventListener("click", checkAccess); // password logic
+    } else {
+        button.addEventListener("click", () => {
+            window.location.href = links[i];
+        });
+    }
 })
 
 document.documentElement.classList.remove("no-js");
@@ -14,7 +35,7 @@ function checkAccess() {
 
   if (pw === "ZETAPROTOCOL") {
     // Navigate to your NPC Manager
-    window.location.href = "npc-manager.html?gm=1";
+    window.location.href = `${prefix}npc-manager.html?gm=1`;
   } else {
     alert("ACCESS DENIED. Incident logged With NetWatch.");
   }
