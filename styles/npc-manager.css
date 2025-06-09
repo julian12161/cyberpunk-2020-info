@@ -1,0 +1,92 @@
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.npc-card {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 30%;
+    background-color: black;
+    color: limegreen;
+    font-family: monospace;
+}
+
+.armor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+    /* gap: 0.5em 1em; */
+    margin-top: 1em;
+}
+
+.armor div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    padding: 1%;
+    text-align: center;
+}
+
+.armor input {
+    width: 2em;
+}
+
+.stats input {
+    width: 60px;
+    margin: 2px;
+    font-family: monospace;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    border: 1px solid limegreen;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: limegreen;
+    color: black;
+}
+
+.damage-section {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.damage-section input {
+    width: 60px;
+    margin: 2px;
+    font-family: monospace;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.health input {
+    width: 60px;
+    margin: 2px;
+    font-family: monospace;
+}
+
+.weapon input {
+    width: 60px;
+    margin: 2px;
+    font-family: monospace;
+}
+
+#npcAdd {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}

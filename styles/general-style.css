@@ -112,7 +112,7 @@ nav {
     text-align: center;
     border: 4px solid black;
     font-size: 14px;
-    height: 50px;
+    height: 40px;
     width: 80%;
     min-width: 8vw;
     max-width: 150px;
@@ -123,6 +123,13 @@ nav {
     transition: all 0.1s ease-in-out;
     padding: 3% 5%;
 }
+
+.access-blocked {
+  color: red;
+  text-shadow: 0 0 2px red, 0 0 5px darkred;
+  font-weight: bold;
+}
+
 
 .index:active {
     background: linear-gradient(to bottom, #888888, #555555);
