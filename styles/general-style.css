@@ -23,6 +23,23 @@ body {
     max-width: 1200px;
 }
 
+.no-js #main > * {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+#main > * {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When loaded, reveal with animation */
+.crt-reveal > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* === HEADER === */
 h1 {
     background-color: #020100;

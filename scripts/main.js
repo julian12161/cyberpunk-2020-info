@@ -6,3 +6,5 @@ buttons.forEach((button, i) => {
         window.location.href = links[i];
     })
 })
+
+document.documentElement.classList.remove("no-js");

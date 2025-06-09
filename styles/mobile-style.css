@@ -61,6 +61,10 @@
         align-self: stretch;
     }
 
+    h4 {
+        scale: 90%;
+    }
+
     footer {
         position: relative;
         width: 100%;
