@@ -23,12 +23,10 @@
 .message {
   display: inline-block;
   width: 100%;
-  margin: 0 0 1em;
   padding: 0.5em;
   background: black;
   color: limegreen;
   border: 1px solid limegreen;
   font-family: monospace;
   text-align: center;
-  box-sizing: border-box;
 }
