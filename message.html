@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 800px)">
         <script async src="scripts/main.js"></script>
         <script defer src="scripts/crt.js"></script>
+        <script defer src="scripts/message.js"></script>
     </head>
     <body>
         <div id="page">
@@ -70,43 +71,61 @@
                 </div>
 
                 <div id="content">
-                    <div>
-                        <h3>How to use:</h3>
-                        <p><strong>Message Mail</strong> allows you to leave a message on a dataterm; this message is stored in all dataterms in the city and can only be accessed if the reciepient has a secret 7 letter/number code which you have previously agreed on. You can also post <strong>General Messages</strong> to the Message Mail as well. These messages can be accessed by any dataterm without a seven letter code.</p>
-                        <p>To use Message Mail, you keyboard in your message (no longer than 50 words), and assign it a seven letter/number code (such as HOTSTUF or NETRUN2). The message cannot be retrieved unless the exact code is entered.</p>
-                        <p>If two exact codes are entered into the dataterm, the term accepts the first and tells the second to select a new code. To retrieve a message, you must place a phone debit card with your ID on it into the dataterm, and use the right code word in combination with that ID. Messages are erased after 48 hours.</p>
-                        <p>Most people use several dataterm "blind drops"; they have one code they give to all friends; this drop lists all the codes for other message areas.</p>
-                        <p><strong>Hardcopy</strong> gives you a fax-flimsy of whatever you want, at a cost of .50eb per page</p>
-                    </div>
-                    <form name="messageMail" method="POST" data-netlify="true">
-                        <fieldset>
-                            <legend>Message</legend>
+                    <div id="messages">
+                        <div>
+                            <h3>How to use:</h3>
+                            <p><strong>Message Mail</strong> allows you to leave a message on a dataterm; this message is stored in all dataterms in the city and can only be accessed if the reciepient has a secret 7 letter/number code which you have previously agreed on. You can also post <strong>General Messages</strong> to the Message Mail as well. These messages can be accessed by any dataterm without a seven letter code.</p>
+                            <p>To use Message Mail, you keyboard in your message (no longer than 50 words), and assign it a seven letter/number code (such as HOTSTUF or NETRUN2). The message cannot be retrieved unless the exact code is entered.</p>
+                            <p>If two exact codes are entered into the dataterm, the term accepts the first and tells the second to select a new code. To retrieve a message, you must place a phone debit card with your ID on it into the dataterm, and use the right code word in combination with that ID. Messages are erased after 48 hours.</p>
+                            <p>Most people use several dataterm "blind drops"; they have one code they give to all friends; this drop lists all the codes for other message areas.</p>
+                            <p><strong>Hardcopy</strong> gives you a fax-flimsy of whatever you want, at a cost of .50eb per page</p>
+                        </div>
+                        <form name="messageMail" method="POST" data-netlify="true">
+                            <fieldset>
+                                <legend>Message</legend>
 
-                            <div>
-                                <label for="code">Input code:</label>
-                                <input type="text" id="code" name="code" maxlength="7">
-                            </div>
+                                <div>
+                                    <label for="code">Input code:</label>
+                                    <input type="text" id="code" name="code" maxlength="7">
+                                </div>
 
-                            <div>
-                                <label for="identity">SIN</label>
+                                <div>
+                                    <label for="identity">SIN</label>
                                 <input type="text" id="identity" name="identity">
-                            </div>
+                                </div>
 
-                            <div>
-                                <label for="message">Input Message:</label>
-                                <textarea id="message" name="message" maxlength="250" rows="20"></textarea>
-                            </div>
+                                <div>
+                                    <label for="message">Input Message:</label>
+                                    <textarea id="message" name="message" maxlength="250" rows="20"></textarea>
+                                </div>
 
-                            <div>
-                                <label for="hardcopy">Hardcopy?</label>
-                                <input type="checkbox" id="hardcopy" name="hardcopy">
-                            </div>
+                                <p> Word Count:
+                                    <span id="show">0</span>
+                                </p>
 
-                            <div>
-                                <button type="submit">submit</button>
-                            </div>
-                        </fieldset>
-                    </form>
+                                <div>
+                                    <label for="hardcopy">Hardcopy?</label>
+                                    <input type="checkbox" id="hardcopy" name="hardcopy">
+                                </div>
+
+                                <div>
+                                    <button type="submit">submit</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div id="retrieveBox">
+                        <h3>Retrieve Message</h3>
+                        <label for="retrieveCode">Enter Message Code:</label>
+                        <input type="text" id="retrieveCode" maxlength="7">
+                        <button onclick="retrieveMessage()">Retrieve</button>
+                        <div id="retrievedMessage" class="messageOutput"></div>
+                    </div>
+
+                    <div>
+                        <button id="generalMessages">General Messages</button>
+                    </div>
                 </div>
 
                 <footer>

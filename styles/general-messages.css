@@ -1,0 +1,34 @@
+/* .message {
+    padding: 0.5em;
+    background: black;
+    color: limegreen;
+    border: 1px solid limegreen;
+    font-family: monospace;
+    text-align: center;
+    width: 32%;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+} */
+
+#content {
+  column-count: 3;
+  column-gap: 1em;
+  padding: 1em;
+}
+
+.message {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  background: black;
+  color: limegreen;
+  border: 1px solid limegreen;
+  font-family: monospace;
+  text-align: center;
+  box-sizing: border-box;
+}

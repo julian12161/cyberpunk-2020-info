@@ -1,0 +1,10 @@
+@media (max-width: 800px) {
+  #content {
+    column-count: 1;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  #content {
+    column-count: 2;
+  }
+}
