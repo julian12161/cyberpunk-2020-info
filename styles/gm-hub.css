@@ -1,0 +1,55 @@
+.gm-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.gm-menu li a {
+  display: block;
+  background: black;
+  border: 1px solid red;
+  color: red;
+  font-family: monospace;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.gm-menu li a:hover {
+  background: red;
+  color: black;
+}
+
+.terminal-blurb {
+  font-family: monospace;
+  color: limegreen;
+  background: black;
+  padding: 1em;
+  border: 1px solid limegreen;
+}
+
+#bootScreen {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bootText {
+    animation: flicker 1s infinite alternate;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+@keyframes flicker {
+    0%   { opacity: 1; }
+    40%  { opacity: 0.8; }
+    60%  { opacity: 0.3; }
+    100% { opacity: 1; }
+}
