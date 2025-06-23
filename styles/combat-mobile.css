@@ -6,6 +6,17 @@
     #mobileTopic {
         display: block;
         margin-top: 0;
+    }
 
+    #checkboxes {
+        grid-template-columns: 1fr; /* Stack vertically on small screens */
+    }
+
+    #main-body {
+        display: block;
+    }
+
+    #content {
+        max-width: 100%;
     }
 }

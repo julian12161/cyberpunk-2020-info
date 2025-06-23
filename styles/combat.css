@@ -14,3 +14,39 @@
     border: 2px solid black;
     margin: 1px;
 }
+
+.target-helper, #modifiers, #cover-sp, #full-auto-calc, #turn-order {
+  background: black;
+  border: 1px solid limegreen;
+  padding: 1em;
+  margin: 1em 0;
+  font-family: monospace;
+  color: limegreen;
+  text-align: center;
+  max-width: 20%;
+}
+
+.target-helper label,
+.target-helper select,
+.target-helper p {
+  display: block;
+  margin: 0.5em 0;
+}
+
+#main-body {
+  display: flex;
+  flex-direction: row;
+}
+
+#roll-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5em;
+  text-align: left;
+}
