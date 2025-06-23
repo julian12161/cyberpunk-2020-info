@@ -4,10 +4,11 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Friday Night Firefight</title>
         <link rel="stylesheet" href="styles/general-style.css">
-        <link rel="stylesheet" href="styles/combat.css">
+        <link rel="stylesheet" href="styles/combat-temp.css">
         <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 800px)">
         <link rel="stylesheet" href="styles/combat-mobile.css" media="(max-width: 800px)">
         <script async src="scripts/main.js"></script>
+        <script defer src="scripts/combat.js"></script>
         <script defer src="scripts/crt.js"></script>
     </head>
     <body>
@@ -74,70 +75,272 @@
                         <p>Night City is a warzone waiting to happen. Whether you’re an Edgerunner, a corpo, or just an unlucky bystander, knowing how to handle a firefight might keep you breathing. Below is a quick-reference guide to combat flow—when to run, when to fight, and when to duck.</p>
                     </div>
 
-                    <div>
-                        <div>
-                            <div>
-                                <label for="shooting">Am I shooting something?</label>
-                                <input type="checkbox" id="shooting" name="shooting">
+                    <div id="main-body">
+                        <details class="target-helper">
+                            <summary><h3>Target Number Helper</h3></summary>
+
+                            <label for="weapon-type">Weapon Type:</label>
+                            <select id="weapon-type">
+                                <option value="handgun">Handgun</option>
+                                <option value="smg">SMG</option>
+                                <option value="shotgun">Shotgun</option>
+                                <option value="rifle">Rifle</option>
+                                <option value="thrown">Thrown Weapon</option>
+                            </select>
+
+                            <label for="distance-band">Distance:</label>
+                            <input type="number" name="distance-band" id="distance-band">
+                        </details>
+
+                        <details id="modifiers">
+                            <summary><h3>Combat Modifiers</h3></summary>
+                            <div id="checkboxes">
+                                <div>
+                                    <input type="checkbox" class="mods" id="immobile" data-mod="4" name="immobile">
+                                    <label for="immobile">Target Immobile: +4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="dodging" data-mod="-2" name="dodging">
+                                    <label for="dodging">Target Dodging (melee only): -2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="moving-target-low" data-mod="-3" name="moving-target-low">
+                                    <label for="moving-target-low">Moving Target REF > 10: -3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="moving-target-med" data-mod="-4" name="moving-target-med">
+                                    <label for="moving-target-med">Moving Target REF > 12: -4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="moving-target-high" data-mod="-5" name="moving-target-high">
+                                    <label for="moving-target-high">Moving Target REF > 14: -5</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="fast-draw" data-mod="-3" name="fast-draw">
+                                    <label for="fast-draw">Fast Draw/Snapshot: -3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="ambush" data-mod="5" name="ambush">
+                                    <label for="ambush">Ambush: +5</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="aimed-shot" data-mod="-4" name="aimed-shot">
+                                    <label for="aimed-shot">Aimed Shot at Body Location: -4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="ricochet" data-mod="-5" name="ricochet">
+                                    <label for="ricochet">Ricochet or Indirect fire: -5</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="blinded" data-mod="-3" name="blinded">
+                                    <label for="blinded">Blinded by light or dust: -3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="silhouetted" data-mod="2" name="silhouetted">
+                                    <label for="silhouetted">Target Silhouetted: +2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="turning" data-mod="-2" name="turning">
+                                    <label for="turning">Turning to face target: -2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="two-weapons" data-mod="-3" name="two-weapons">
+                                    <label for="two-weapons">Using Two-Weapons: -3 to each</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="running" data-mod="-3" name="running">
+                                    <label for="running">Firing while running: -3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="hip-fire" data-mod="-2" name="hip-fire">
+                                    <label for="hip-fire">Firing from hip: -2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="turret" data-mod="2" name="turret">
+                                    <label for="turret">Turret mounted weapon: +2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="mounted" data-mod="-4" name="mounted">
+                                    <label for="mounted">Vehicle mounted, no turret: -4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="large" data-mod="4" name="large">
+                                    <label for="large">Large target: +4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="small" data-mod="-4" name="small">
+                                    <label for="small">Small target: -4</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="tiny" data-mod="-6" name="tiny">
+                                    <label for="tiny">Tiny target: -6</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="aiming" data-mod="1" name="aiming">
+                                    <label for="aiming">Aiming: +1/round (up to 3)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="laser" data-mod="1" name="laser">
+                                    <label for="laser">Laser sight: +1</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="telescope" data-mod="1" name="telescope">
+                                    <label for="telescope">Telescopic sight: +2 extreme, +1 medium</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="targeting" data-mod="1" name="targeting">
+                                    <label for="targeting">Targeting scope: +1</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="smartgun" data-mod="2" name="smartgun">
+                                    <label for="smartgun">Smartgun: +2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="smartgogs" data-mod="2" name="smartgogs">
+                                    <label for="smartgogs">Smartgoggles: +2</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="burst" data-mod="3" name="burst">
+                                    <label for="burst">Three Round Burst (close/medium only): +3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="full-auto-close" name="full-auto-close">
+                                    <label for="full-auto-close">Full Auto, Close(up to 20m): +1/10 rounds</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" class="mods" id="full-auto" name="full-auto">
+                                    <label for="full-auto">Full Auto, Other: -1/10 rounds</label>
+                                </div>
                             </div>
+                        </details>
 
-                            <div>
-                                <p>What weapon am I shooting with?</p>
-                                <div>
-                                    <label for="handgun">Handgun</label>
-                                    <input type="radio" id="handgun" name="handgun">
-                                </div>
+                        <details id="cover-sp">
+                            <summary><h3>Common Cover SPs</h3></summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="row" colspan="2"><h3>Common Cover SPs</h3></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Sheetrock Wall</th>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Stone Wall</th>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tree, Phone Pole</th>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">brick Wall</th>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Concrete Block Wall</th>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Wood Door</th>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Heavy Wood Door</th>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Steel Door</th>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Concrete Utility Pole</th>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Data Term&trade;</th>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Car Body, Door</th>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Armoured Car Body</th>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">AV-4 Body</th>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Engine Block</th>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Mailbox</th>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Hydrant</th>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Curb</th>
+                                        <td>25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
 
-                                <div>
-                                    <label for="smg">Submachineguns</label>
-                                    <input type="radio" id="smg" name="smg">
-                                </div>
+                        <details id="full-auto-calc">
+                            <summary><h3>Full Auto Calculator</h3></summary>
+                            <!-- if over to hit, roll damage once but each bullet gets a roll for location -->
+                            <label for="rounds-fired">Rounds fired:</label>
+                            <input type="number" name="rounds-fired" id="rounds-fired" min="1" value="1">
+                            <p>Bonus/Penalty: <span id="fa-modifier">—</span></p>
+                            <p>Target Number: <span id="full-auto-target"></span></p>
+                        </details>
 
-                                <div>
-                                    <label for="shotgun">Shotgun</label>
-                                    <input type="radio" id="shotgun" name="shotgun">
-                                </div>
+                        <details id="turn-order">
+                            <summary><h3>Combat Turn Order</h3></summary>
+                            <ol>
+                                <li>
+                                    <strong>Roll Initiative:</strong> 1d10 + REF + Combat Sense.
+                                    <br>(+3 if using Fast Draw)
+                                </li>
+                                <li>
+                                    <strong>Declare Actions:</strong> Each round, you may perform 1 action without penalty.
+                                    <br>Each additional action imposes a <strong>-3 penalty</strong> to all rolls.
+                                    <br>(Most of the time, with a round being 3 seconds long, this will be limited to 3 actions)
+                                </li>
+                                <li>
+                                    <strong>Resolve Dice Rolls:</strong> Attacks, dodges, skill checks, etc.
+                                </li>
+                                <li>
+                                    <strong>Roll Hit Location & Apply Damage:</strong>
+                                    <br>• Subtract target’s SP and Body Type Modifier (BTM) from damage.
+                                    <br>• If you take 8+ damage that is fully absorbed, reduce that location's SP by 1.
+                                    <br>• If any damage gets through armor/BTM, reduce that location's SP by 2.
+                                </li>
+                                <li>
+                                    <strong>Check Stun or Death Saves:</strong>
+                                    <br>• If Wound Level ≥ Death Save threshold → Roll <strong>Death Save</strong>: roll under BODY - Wound Level.
+                                    <br>• If only Stun applies → Roll <strong>Stun Save</strong>: roll under BODY - Stun Level.
+                                    <br>• Fail = stunned 1 round (or dead if it was a Death Save).
+                                </li>
+                            </ol>
+                        </details>
+                    </div>
 
-                                <div>
-                                    <label for="rifles">Rifles</label>
-                                    <input type="radio" id="rifles" name="rifles">
-                                </div>
+                    <div id="roll-info">
+                        <p><strong>Required Roll:</strong> <span id="target-result">—</span></p>
+                        <p><strong>Range Band:</strong> <span id="range-band">—</span></p>
+                        <p><strong>Total Modifiers:</strong> <span id="modifier-total">0</span></p>
+                        <p><strong>Final TN:</strong> <span id="final-tn">—</span></p>
 
-                                <div>
-                                    <label for="thrown">Thrown Objects</label>
-                                    <input type="radio" id="thrown" name="thrown">
-                                </div>
-                            </div>
-
-                            <div>
-                                <p>How far away is my target?</p>
-
-                                <div>
-                                    <label for="touching">Point Blank (Touching)</label>
-                                    <input type="radio" id="touching" name="touching">
-                                </div>
-                                <div>
-                                    <label for="close">Close (1/4 Long range)</label>
-                                    <input type="radio" id="close" name="close">
-                                </div>
-                                <div>
-                                    <label for="medium">Medium (1/2 Long range)</label>
-                                    <input type="radio" id="medium" name="medium">
-                                </div>
-                                <div>
-                                    <label for="long">Long (Full range)</label>
-                                    <input type="radio" id="long" name="long">
-                                </div>
-                                <div>
-                                    <label for="extreme">Extreme (2x Long range)</label>
-                                    <input type="radio" id="extreme" name="extreme">
-                                </div>
-                            </div>
-
-                            <div>
-                                <p>What are my Situational Modifiers?</p>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="warning">

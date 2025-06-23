@@ -1,0 +1,186 @@
+/* === Layout Core === */
+#content {
+  height: 100%;
+  padding: 1em;
+}
+
+#mobileTopic {
+    display: none;
+}
+
+#main-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1em;
+  justify-content: center;
+}
+
+/* === Panel Blocks === */
+.target-helper,
+#modifiers,
+#cover-sp,
+#full-auto-calc,
+#turn-order,
+#tohit-ref {
+  background: black;
+  border: 1px solid limegreen;
+  padding: 1em;
+  margin: 1em auto;
+  font-family: monospace;
+  color: limegreen;
+  text-align: left;
+  box-shadow: 0 0 8px limegreen;
+  border-radius: 4px;
+}
+
+/* === Section Headers === */
+#main-body > div h3,
+#tohit-ref h3,
+#roll-info h3 {
+  border-bottom: 1px solid limegreen;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: limegreen;
+}
+
+/* === Label & Input Styling === */
+label {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  color: limegreen;
+}
+
+input[type="number"],
+select {
+  background: black;
+  color: limegreen;
+  border: 1px solid limegreen;
+  padding: 0.2em 0.5em;
+  font-family: monospace;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* === Modifier Checkboxes === */
+#checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 0.5em 1em; /* row gap / column gap */
+  text-align: left;
+  align-items: center;
+}
+
+#checkboxes div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#checkboxes label {
+  margin: 0;
+  line-height: 1.4;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.4em;
+}
+
+/* === Roll Info Summary === */
+#roll-info {
+  background: black;
+  border: 1px solid red;
+  padding: 1em;
+  font-family: monospace;
+  color: red;
+  text-align: center;
+  margin: 2em auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+  border-radius: 4px;
+  box-shadow: 0 0 10px red;
+  position: sticky;
+  bottom: 0;
+}
+
+/* === Cover SP Table === */
+#cover-sp table {
+  width: 100%;
+  border-collapse: collapse;
+  color: limegreen;
+  font-family: monospace;
+}
+
+#cover-sp th,
+#cover-sp td {
+  border: 1px solid limegreen;
+  padding: 0.4em 0.6em;
+  text-align: left;
+}
+
+#cover-sp thead th {
+  background: #002200;
+  text-align: center;
+}
+
+/* === Turn Order List === */
+#turn-order ol {
+  padding-left: 1.2em;
+}
+
+#turn-order li {
+  margin-bottom: 1em;
+}
+
+/* === Warning Banner === */
+.warning {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+  margin: 1px;
+  font-family: monospace;
+}
+
+details {
+  background: black;
+  border: 1px solid limegreen;
+  margin: 1em 0;
+  color: limegreen;
+  font-family: monospace;
+}
+
+summary {
+  cursor: pointer;
+  background: #111;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-bottom: 1px solid limegreen;
+}
+
+summary h3 {
+  display: inline;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+details[open] summary {
+  background: #000;
+}
+
+/* @media (min-width: 801px) {
+  details.combat-section {
+    open: open;
+  }
+
+  details.combat-section[open] > summary::after {
+    content: "";
+  }
+} */
