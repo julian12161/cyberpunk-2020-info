@@ -4,7 +4,7 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Friday Night Firefight</title>
         <link rel="stylesheet" href="styles/general-style.css">
-        <link rel="stylesheet" href="styles/combat-temp.css">
+        <link rel="stylesheet" href="styles/combat.css">
         <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 800px)">
         <link rel="stylesheet" href="styles/combat-mobile.css" media="(max-width: 800px)">
         <script async src="scripts/main.js"></script>
@@ -76,7 +76,7 @@
                     </div>
 
                     <div id="main-body">
-                        <details class="target-helper">
+                        <details class="combat-section">
                             <summary><h3>Target Number Helper</h3></summary>
 
                             <label for="weapon-type">Weapon Type:</label>
@@ -92,7 +92,7 @@
                             <input type="number" name="distance-band" id="distance-band">
                         </details>
 
-                        <details id="modifiers">
+                        <details class="combat-section">
                             <summary><h3>Combat Modifiers</h3></summary>
                             <div id="checkboxes">
                                 <div>
@@ -214,7 +214,7 @@
                             </div>
                         </details>
 
-                        <details id="cover-sp">
+                        <details class="combat-section">
                             <summary><h3>Common Cover SPs</h3></summary>
                             <table>
                                 <thead>
@@ -295,7 +295,7 @@
                             </table>
                         </details>
 
-                        <details id="full-auto-calc">
+                        <details class="combat-section">
                             <summary><h3>Full Auto Calculator</h3></summary>
                             <!-- if over to hit, roll damage once but each bullet gets a roll for location -->
                             <label for="rounds-fired">Rounds fired:</label>
@@ -304,7 +304,7 @@
                             <p>Target Number: <span id="full-auto-target"></span></p>
                         </details>
 
-                        <details id="turn-order">
+                        <details class="combat-section">
                             <summary><h3>Combat Turn Order</h3></summary>
                             <ol>
                                 <li>
