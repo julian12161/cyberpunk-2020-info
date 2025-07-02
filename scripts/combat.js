@@ -88,7 +88,7 @@ document.querySelectorAll(".mods").forEach(box =>
 window.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth >= 801) {
     document.querySelectorAll('details.combat-section').forEach(d => {
-      d.open = true;
+      d.setAttribute('open', '');
     });
   }
 });

@@ -19,4 +19,8 @@
     #content {
         max-width: 100%;
     }
+
+    #roll-info {
+        bottom: 24%;
+    }
 }
