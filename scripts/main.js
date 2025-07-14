@@ -33,9 +33,9 @@ document.documentElement.classList.remove("no-js");
 function checkAccess() {
   const pw = prompt("Zeta Security Clearance Required:");
 
-  if (pw === "ZETAPROTOCOL") {
+  if (pw.toUpperCase() === "ZETAPROTOCOL") {
     // Navigate to your NPC Manager
-    window.location.href = `${prefix}npc-manager.html?gm=1`;
+    window.location.href = `${prefix}gm-hub.html?gm=1`;
   } else {
     alert("ACCESS DENIED. Incident logged With NetWatch.");
   }

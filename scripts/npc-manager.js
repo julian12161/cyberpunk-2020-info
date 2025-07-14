@@ -111,3 +111,103 @@ function copyNPC(button) {
     const clone = card.cloneNode(true);
     document.querySelector('#content').appendChild(clone);
 }
+
+function saveGroup() {
+    const npcCards = document.querySelectorAll('.npc-card');
+    const npcData = [];
+
+    npcCards.forEach(card => {
+        const data = {
+            name: card.querySelector('h3').textContent,
+            int: card.querySelector('.int').value,
+            ref: card.querySelector('.ref').value,
+            tech: card.querySelector('.tech').value,
+            cool: card.querySelector('.cool').value,
+            attr: card.querySelector('.attr').value,
+            luck: card.querySelector('.luck').value,
+            ma: card.querySelector('.ma').value,
+            body: card.querySelector('.body').value,
+            emp: card.querySelector('.emp').value,
+            save: card.querySelector('.save').value,
+            btm: card.querySelector('.btm').value,
+            sp: {
+                head: card.querySelector('[name="sp-head"]').value,
+                torso: card.querySelector('[name="sp-torso"]').value,
+                rarm: card.querySelector('[name="sp-rarm"]').value,
+                larm: card.querySelector('[name="sp-larm"]').value,
+                rleg: card.querySelector('[name="sp-rleg"]').value,
+                lleg: card.querySelector('[name="sp-lleg"]').value
+            },
+            hp: card.querySelector('.hp-current').value,
+            weapon: card.querySelector('.weapon-name').value,
+            ammo: card.querySelector('.ammo').value,
+            initiative: card.querySelector('.init-result').textContent
+        };
+
+        npcData.push(data);
+    });
+
+    const blob = new Blob([JSON.stringify(npcData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'npc-group.json';
+    a.click();
+
+    URL.revokeObjectURL(url); // clean up
+}
+
+document.getElementById('loadGroupInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const contents = e.target.result;
+        try {
+            const npcGroup = JSON.parse(contents);
+            loadGroup(npcGroup);
+        } catch (err) {
+            alert('Invalid file format!');
+            console.error(err);
+        }
+    };
+    reader.readAsText(file);
+});
+
+function loadGroup(npcGroup) {
+    const container = document.getElementById('content');
+    container.innerHTML = ''; // Clear existing cards
+
+    npcGroup.forEach(npc => {
+        const template = document.getElementById('npcTemplate');
+        const clone = template.content.cloneNode(true);
+        const card = clone.querySelector('.npc-card');
+
+        card.querySelector('h3').textContent = npc.name || 'Unnamed NPC';
+        card.querySelector('.int').value = npc.int || '';
+        card.querySelector('.ref').value = npc.ref || '';
+        card.querySelector('.tech').value = npc.ref || '';
+        card.querySelector('.cool').value = npc.ref || '';
+        card.querySelector('.attr').value = npc.ref || '';
+        card.querySelector('.luck').value = npc.ref || '';
+        card.querySelector('.ma').value = npc.ref || '';
+        card.querySelector('.body').value = npc.ref || '';
+        card.querySelector('.emp').value = npc.ref || '';
+        card.querySelector('.save').value = npc.save || '';
+        card.querySelector('.btm').value = npc.btm || '';
+        card.querySelector('[name="sp-head"]').value = npc.sp?.head || '';
+        card.querySelector('[name="sp-torso"]').value = npc.sp?.torso || '';
+        card.querySelector('[name="sp-rarm"]').value = npc.sp?.rarm || '';
+        card.querySelector('[name="sp-larm"]').value = npc.sp?.larm || '';
+        card.querySelector('[name="sp-rleg"]').value = npc.sp?.rleg || '';
+        card.querySelector('[name="sp-lleg"]').value = npc.sp?.lleg || '';
+        card.querySelector('.hp-current').value = npc.hp || '40';
+        card.querySelector('.weapon-name').value = npc.weapon || '';
+        card.querySelector('.ammo').value = npc.ammo || '';
+        card.querySelector('.init-result').textContent = npc.initiative || '0';
+
+        container.appendChild(clone);
+    });
+}

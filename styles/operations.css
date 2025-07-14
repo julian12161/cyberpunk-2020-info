@@ -1,0 +1,47 @@
+#session-planner, #session-log {
+  background: black;
+  border: 1px solid limegreen;
+  padding: 1em;
+  color: limegreen;
+  font-family: monospace;
+}
+
+#session-planner textarea,
+#session-planner input[type="text"] {
+  width: 100%;
+  background: #111;
+  color: limegreen;
+  border: 1px solid limegreen;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+}
+
+.plan-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.session-card[draggable="true"] {
+  cursor: grab;
+}
+
+.session-card[draggable="true"]:active {
+  cursor: grabbing;
+  opacity: 0.4;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    border: 1px solid limegreen;
+    padding: 4px 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: limegreen;
+    color: black;
+}
