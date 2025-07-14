@@ -18,19 +18,59 @@
                 <h3 contenteditable="true" tabindex="0">Unnamed NPC</h3>
 
                 <div class="stats">
+                    <label for="int">Int</label>
+
+                    <label for="ref">Ref</label>
+
+                    <label for="tech">Tech</label>
+                </div>
+                <div class="stats">
+                    <input type="number" class="int" name="int">
+
+                    <input type="number" class="ref" name="ref">
+
+                    <input type="number" class="tech" name="tech">
+                </div>
+
+                <div class="stats">
+                    <label for="cool">Cool</label>
+
+                    <label for="attr">Attr</label>
+
+                    <label for="luck">Luck</label>
+                </div>
+                <div class="stats">
+                    <input type="number" class="cool" name="cool">
+
+                    <input type="number" class="attr" name="attr">
+
+                    <input type="number" class="luck" name="luck">
+                </div>
+
+                <div class="stats">
+                    <label for="ma">MA</label>
+
+                    <label for="body">Body</label>
+
+                    <label for="emp">Emp</label>
+                </div>
+                <div class="stats">
+                    <input type="number" class="ma" name="ma">
+
+                    <input type="number" class="body" name="body">
+
+                    <input type="number" class="emp" name="emp">
+                </div>
+
+                <div class="stats">
                     <label for="save">Save</label>
 
                     <label for="btm">BTM</label>
-
-                    <label for="ref">Ref</label>
                 </div>
-
                 <div class="stats">
                     <input type="number" class="save" name="save">
 
                     <input type="number" class="btm" name="btm">
-
-                    <input type="number" class="ref" name="ref">
                 </div>
 
                 <div class="armor">
@@ -118,6 +158,8 @@
                 <button class="mobileButton">Corporations</button>
                 <button class="mobileButton">Messages</button>
                 <button class="mobileButton">NCPD</button>
+                <button class="mobileButton">Edgerunners</button>
+                <div></div>
                 <button class="mobileButton">Combat 101</button>
             </div>
             <nav>
@@ -148,6 +190,10 @@
                     </div>
 
                     <div>
+                        <a href="Edgerunners.html"><li class="index">Edgerunners</li></a>
+                    </div>
+
+                    <div>
                         <a href="combat.html"><li class="index">Combat 101</li></a>
                     </div>
 
@@ -166,6 +212,12 @@
                         <img src="arrow.png" id="arrow">
                         <a href="gm-hub.html" id="up"><h5>UP</h5></a>
                     </div>
+                </div>
+
+                <div id="save-load">
+                    <button onclick="saveGroup()" id="saveGroup">Save Group</button>
+                    <input type="file" id="loadGroupInput" accept=".json" style="display:none;" />
+                    <button onclick="document.getElementById('loadGroupInput').click()">Load Group</button>
                 </div>
 
                 <button onclick="addNPC()" id="npcAdd">Add Agent</button>

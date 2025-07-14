@@ -11,6 +11,7 @@
     background-color: black;
     color: limegreen;
     font-family: monospace;
+    text-align: center;
 }
 
 .armor {
@@ -73,6 +74,7 @@ button:hover {
     text-align: center;
 }
 
+
 .health input {
     width: 60px;
     margin: 2px;
@@ -89,4 +91,18 @@ button:hover {
     position: sticky;
     top: 0;
     z-index: 2;
+}
+
+#npcAdd button {
+    width: 100%;
+}
+
+#save-load {
+    display: flex;
+    width: 100%;
+    gap: 0;
+}
+
+#save-load button {
+    width: 100%;
 }

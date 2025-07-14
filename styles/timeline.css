@@ -1,0 +1,44 @@
+#addEventForm {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: space-around;
+}
+
+#addEventForm input,
+#addEventForm button {
+  padding: 0.5em;
+  font-family: monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-family: monospace;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 0.5em;
+}
+
+td button {
+  font-size: 0.9em;
+  padding: 0.25em;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    border: 1px solid limegreen;
+    padding: 4px 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: limegreen;
+    color: black;
+}

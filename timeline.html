@@ -2,13 +2,13 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to your DataTerm</title>
+        <title>Campaign Timeline</title>
         <link rel="stylesheet" href="styles/general-style.css">
-        <link rel="stylesheet" href="styles/index-style.css">
+        <link rel="stylesheet" href="styles/timeline.css">
         <link rel="stylesheet" href="styles/mobile-style.css" media="(max-width: 800px)">
-        <link rel="stylesheet" href="styles/index-mobile.css" media="(max-width: 800px)">
         <script async src="scripts/main.js"></script>
         <script defer src="scripts/crt.js"></script>
+        <script defer src="scripts/timeline.js"></script>
     </head>
     <body>
         <div id="page">
@@ -62,43 +62,43 @@
             </nav>
 
             <div id="main">
-
                 <header>
-                    <h1>Welcome to your DataTerm</h1>
+                    <h1>Campaign Timeline</h1>
                 </header>
 
-                <div id="nightcorp">
-                    <img src="logos/Nightcorp.png" alt="Nightcorp Logo">
+                <div id="topicBox">
+                    <h4 class="DDS">DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: Campaign Timeline</h5>
+                    <div id=arrowUp>
+                        <img src="arrow.png" id="arrow">
+                        <a href="gm-hub.html" id="up"><h5>UP</h5></a>
+                    </div>
                 </div>
 
-                <div id="paragraphs">
-                    <div class="welPara">
-                        <h3 class="paraHead">Instructions</h3>
-                        <ol>
-                            <li>The DataTerm Master Entry will send you to a particular category and page screen.</li>
-                            <li id="example">Message Mail</li>
-                            <li>Within each Master Page screen, there will be Topic Dialogue boxes.</li>
-                            <div id="topicBox">
-                                <h4>DATATERM DISPLAY SYSTEM</h4>
-                                <h5 id="topic">Topic: Message Mail</h5>
-                                <img src="arrow.png" id="arrow">
-                                <a href="" id="up"><h5>UP</h5></a>
-                            </div>
-                            <li>Some topic dialogue boxes direct you to related topics.</li>
-                            <div id="alsoBox">
-                                <h4>See Also</h4>
-                                <img src="arrow.png" id="arrowStretch">
-                                <a href="" id="buttonLink"></a>
-                            </div>
-                        </ol>
-                    </div>
+                <div id="content">
+                    <table>
+                    <thead>
+                        <tr><th>Date</th><th>Event</th><th>Notes</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>11-01-2020</td><td>Residents start disappearing</td><td>Start of main plot</td></tr>
+                        <tr><td>20-01-2020</td><td>Night City gripped by mysterious disappearances</td><td>Screamsheet 0 released</td></tr>
+                        <tr><td>24-01-2020</td><td>NeonMart Attack</td><td>Players attacked by bozos</td></tr>
+                    </tbody>
+                    </table>
 
-                    <div class="welPara">
-                        <h3 class="paraHead">About your DataTerm</h3>
-                        <p>A dataTerm is a public information access module and computer. Placed in heavily armoured cases on most U.S. city street corners, they are linked by fibreoptic landlines to centrally located computer databases.
-                            DataTerms provide news, information, weather reports, entertainment news, net cyberaccess ports and computer terminal use (by the minute). They are the corner market of the future, serving information (rather than produce), to the busy world of the Street.
-                        </p>
-                    </div>
+                    <form id="addEventForm">
+                    <input type="date" name="event-date">
+                    <input type="text" name="event-title" placeholder="Event Title">
+                    <input type="text" name="event-notes" placeholder="Notes (optional)">
+                    <button type="submit">Add Event</button>
+                    </form>
+
+                    <hr>
+                    <button onclick="downloadTimeline()">📁 Download Timeline</button>
+
+                    <input type="file" id="uploadTimeline" accept=".json" style="display: none;" onchange="loadTimelineFile(event)">
+                    <button onclick="document.getElementById('uploadTimeline').click()">📂 Load Timeline</button>
 
                 </div>
 
