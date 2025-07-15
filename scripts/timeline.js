@@ -5,7 +5,7 @@ function renderEvents(events) {
   events.forEach((event, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${event.date}</td>
+      <td>${formatDate(event.date)}</td>
       <td>${event.title}</td>
       <td>${event.notes || ""}</td>
       <td><button onclick="deleteEvent(${index})">🗑️</button></td>
@@ -105,3 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     this.reset();
   });
 });
+
+function formatDate(isoDate) {
+  const date = new Date(isoDate);
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+  const year = date.getFullYear();
+  return `${day}-${month}-${year}`;
+}
