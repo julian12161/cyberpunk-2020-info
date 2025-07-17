@@ -45,3 +45,20 @@ button:hover {
     background-color: limegreen;
     color: black;
 }
+
+li a {
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+}
+
+li a:hover {
+  background-color: black;
+  color: white;
+}
+
+#npcsandlocations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

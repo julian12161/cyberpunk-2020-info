@@ -1,0 +1,10 @@
+#content {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#content img {
+    height: 500px;
+    width: 500px;
+}

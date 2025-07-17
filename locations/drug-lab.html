@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drug Lab</title>
+        <link rel="stylesheet" href="../styles/general-style.css">
+        <link rel="stylesheet" href="../styles/drug-lab-style.css">
+        <link rel="stylesheet" href="../styles/mobile-style.css" media="(max-width: 800px)">
+        <script async src="../scripts/main.js"></script>
+        <script defer src="../scripts/crt.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="mobileNav">
+                <button class="mobileButton access-blocked">ACCESS RESTRICTED</button>
+                <button class="mobileButton">Welcome</button>
+                <button class="mobileButton">Nightcity</button>
+                <button class="mobileButton">Corporations</button>
+                <button class="mobileButton">Messages</button>
+                <button class="mobileButton">NCPD</button>
+                <button class="mobileButton">Edgerunners</button>
+                <div></div>
+                <button class="mobileButton">Combat 101</button>
+            </div>
+            <nav>
+                <h2>MASTER<br />ENTRY<br />INDEX</h2>
+                <div id="masterIndex">
+                    <div>
+                        <a href="#" onclick="checkAccess()"><li class="index access-blocked">ACCESS RESTRICTED</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../index.html"><li class="index">Welcome</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../nightcity.html"><li class="index">Nightcity</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../corporations.html"><li class="index">Corporation Report</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../message.html"><li class="index">Message Mail</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../NCPD.html"><li class="index">NCPD</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../Edgerunners.html"><li class="index">Edgerunners</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../combat.html"><li class="index">Combat 101</li></a>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="main">
+                <header>
+                    <h1>Drug Lab</h1>
+                </header>
+
+                <div id="topicBox">
+                    <h4 class="DDS">DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: Drug Lab</h5>
+                    <div id=arrowUp>
+                        <img src="../arrow.png" id="arrow">
+                        <a href="../operations.html" id="up"><h5>UP</h5></a>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div>
+                        <h3>Drug Lab</h3>
+                        <p>Once a glory site of screaming engines and corporate adrenaline, the Redline Autodrome now rots beneath the weight of time, rust, and rebellion. The grandstands sag under layers of ash and graffiti, twisted metal banners still bearing the faded logos of sponsors long bankrupt or burned out. Wild vines and synthgrass crawl over the outer fencing, choked by wind-blown trash and the occasional gnawed cyberlimb.<br />The track itself—a wide concrete loop once built for velocity—now serves a different purpose. Burnt-out cars form makeshift barricades along the curves, daubed in crude Spine-Hammer colors: jagged red skulls over chrome-gray spray. Oil drums, stacked tires, and rusted engine blocks block access from the road, forcing any intruder to slow down—or die trying.<br />In the pits and garages, the gang has set up its drug operation. Broken pit bays now flicker with jury-rigged lighting, illuminating chemical tanks, worn centrifuges, and racks of stolen lab equipment. The air is thick with the reek of burnt plastic, solvent, and super-heated stim compounds, making your eyes water just stepping close. Vats of boiling hyperstim churn under lazy supervision, tended by junked-out techies with cybernetic arms and melting nerves.<br />The Spine-Hammers themselves lounge around the perimeter, leaning on rebar and repurposed racing gear—hacked motorbikes with spiked wheels, cracked visors, and nitro tanks jacked for speed and brutality. A few have set up betting tables and braindance rigs under shredded tarps, running endless loops of old street races and gang kills for entertainment.<br />Toward the inner paddock, a graffitied watchtower overlooks the scene, likely repurposed as a sniper nest or command post. Beneath it, the crew loads crates of finished product into rusted-out vans bearing false courier tags—ready to ship poison across the city under the radar.<br />Every inch of the circuit screams former glory gone feral. Where once came the roar of engines, now there’s only the hiss of chemicals, the idle chatter of gunmen, and the electric crackle of a gang that lives fast and dies violently.</p>
+                    </div>
+                    <div id="map">
+                        <img src="../maps/ChatGPT Image Jul 16, 2025, 05_12_39 PM.png" alt="Spine-Hammers HQ">
+                        <div id="legend">
+                            <h3>Main Map Zones</h3>
+                            <ol>
+                                <li><h4>Front Gate / Checkpoint (south)</h4></li>
+                                <ul>
+                                    <li><strong>Access:</strong> Heavily barricaded with burnt-out cars and razorwire. Only one clear entry lane.</li>
+                                    <li><strong>NPCs:</strong> 2 Spine-Hammer guards</li>
+                                    <li><strong>Cover:</strong> High—vehicles, concrete slabs, junk piles.</li>
+                                    <li><strong>Notes:</strong> Checkpoint has a cracked, spray-painted sign: “Welcome to Redline – No Spectators.”</li>
+                                </ul>
+                                <li><h4>Racetrack Loop (Encircling)</h4></li>
+                                <ul>
+                                    <li><strong>Purpose:</strong> Former track now acts as internal road + defensive perimeter.</li>
+                                    <li><strong>Features:</strong></li>
+                                    <ul>
+                                        <li>Spiked tire traps and welded wrecks.</li>
+                                        <li>Oil slicks, debris piles.</li>
+                                        <li>Mounted gun nests in old viewing booths (1-2 locations).</li>
+                                    </ul>
+                                    <li><strong>Tactical Use:</strong> Excellent for vehicles, chase scenes, flanking or sabotage.</li>
+                                </ul>
+                                <li><h4>Garage Block / Drug Lab (West side, pit row)</h4></li>
+                                <ul>
+                                    <li><strong>Interior:</strong></li>
+                                    <ul>
+                                        <li>Chemical tanks, tables covered in tubes and burners.</li>
+                                        <li>Makeshift cleanroom for packaging doses (probably not up to spec).</li>
+                                        <li>One overheated terminal logged into a basic drug compounding interface.</li>
+                                    </ul>
+                                    <li><strong>NPCs:</strong> 3–5 techs, 1 mid-ranking chem overseer</li>
+                                    <li><strong>Cover:</strong> Low inside, high around the entrance (concrete barriers, flipped benches).</li>
+                                    <li><strong>Loot:</strong> Drug precursors (valued around $10,000 depending on buyer), encoded formula</li>
+                                </ul>
+                                <li><h4>Crashed Racer Yard (North Curve)</h4></li>
+                                <ul>
+                                    <li><strong>Description:</strong> Piled husks of old racing cars, stripped and rusting. Used for storage and ambushes.</li>
+                                    <li><strong>NPCs:</strong> 2 gang members with SMGs.</li>
+                                    <li><strong>Hazards:</strong> Unstable wrecks, leaking fuel (flammable terrain).</li>
+                                    <li><strong>Cover:</strong> Excellent. Players could sneak here from a side route.</li>
+                                </ul>
+                                <li><h4>Inner Paddock & Command Post (Center-left)</h4></li>
+                                <ul>
+                                    <li><strong>Landmark:</strong> Old race control tower, now Skull-tagged and converted.</li>
+                                    <li><strong>Interior:</strong></li>
+                                    <ul>
+                                        <li>Makeshift throne room for Spine-Hammer chromed leader.</li>
+                                        <li>Locked crate with weapons (2 uzis and a heavy pistol)</li>
+                                    </ul>
+                                    <li><strong>NPCs:</strong> Boss + 2 elite bodyguards</li>
+                                    <li><strong>Boss:</strong> Uses 2 round shotgun, but prefers to use his hands</li>
+                                    <li><strong>Loot:</strong> Plenty of drugs and a set of keys to a truck</li>
+                                </ul>
+                                <li><h4>Loading Dock</h4></li>
+                                <ul>
+                                    <li><strong>Description:</strong> Covered platform where trucks load up crates.</li>
+                                    <li><strong>Loot:</strong> crate of Redshift drugs</li>
+                                </ul>
+                                <li><h4>Spectator Stands (South and East edges)</h4></li>
+                                <ul>
+                                    <li><strong>Condition:</strong> Crumbling concrete, some metal stairwells intact.</li>
+                                    <li><strong>Use:</strong> Excellent sniper or overwatch position.</li>
+                                    <li><strong>NPCs:</strong> Lookout, lightly armed and not expecting trouble</li>
+                                    <li><strong>Hazards:</strong> Fragile</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <div id="copyright">
+                        <a href="https://talsorianstore.com/collections/cyberpunk/products/cyberpunk-2020"><img id="r-talsor" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/R._Talsorian_Games_logo.svg" alt="R Talsorian Games"></a>
+                        <p>&copy</p>
+                    </div>
+
+                    <p class="disclaimer">
+                        This is a fan-made project. It is not affiliated with or endorsed by R. Talsorian Games.
+                        All trademarks and copyrights are the property of their respective owners.
+                    </p>
+
+                    <a href="https://github.com/julian12161/cyberpunk-2020-info/issues" id="contact">Contact me</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

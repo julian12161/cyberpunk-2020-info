@@ -138,7 +138,7 @@ function loadSessionsFile(event) {
   if (!file) return;
 
   const reader = new FileReader();
-  reader.onload = function(e) {
+  reader.onload = function (e) {
     try {
       const importedSessions = JSON.parse(e.target.result);
       if (!Array.isArray(importedSessions)) {
@@ -146,12 +146,21 @@ function loadSessionsFile(event) {
         return;
       }
 
-      // Merge with existing sessions
       const existing = JSON.parse(localStorage.getItem("allSessions") || "[]");
-      const merged = [...existing, ...importedSessions];
+
+      const merged = [...existing];
+      importedSessions.forEach(newSession => {
+        const isDuplicate = existing.some(
+          session => session.title === newSession.title && session.overview === newSession.overview
+        );
+        if (!isDuplicate) {
+          merged.push(newSession);
+        }
+      });
+
       localStorage.setItem("allSessions", JSON.stringify(merged));
       renderSavedSessions();
-      alert("Sessions loaded successfully!");
+      alert("Sessions loaded and merged successfully!");
     } catch (err) {
       alert("Error loading file: " + err.message);
     }
