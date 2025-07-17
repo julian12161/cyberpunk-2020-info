@@ -1,0 +1,9 @@
+#content {
+    display: flex;
+    flex-direction: row;
+}
+
+#content img {
+    height: 756px;
+    width: 540px;
+}

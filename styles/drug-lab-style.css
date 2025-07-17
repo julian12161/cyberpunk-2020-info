@@ -1,0 +1,13 @@
+#map {
+    display: flex;
+    flex-direction: row;
+}
+
+#map img {
+    height: 512px;
+    width: 512px;
+}
+
+#legend {
+    font-size: x-small;
+}
