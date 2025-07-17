@@ -75,32 +75,32 @@
 
                 <div class="armor">
                     <div>
-                        <label for="sp-head">Head 1</label>
+                        <label for="sp-head">Head<br />1</label>
                         <input type="number" class="sp-value" max="99" name="sp-head">
                     </div>
 
                     <div>
-                        <label for="sp-torso">Torso 2-4</label>
+                        <label for="sp-torso">Torso<br />2-4</label>
                         <input type="number" class="sp-value" max="99" name="sp-torso">
                     </div>
 
                     <div>
-                        <label for="sp-rarm">R.Arm 5</label>
+                        <label for="sp-rarm">R.Arm<br />5</label>
                         <input type="number" class="sp-value" max="99" name="sp-rarm">
                     </div>
 
                     <div>
-                        <label for="sp-larm">L.Arm 6</label>
+                        <label for="sp-larm">L.Arm<br />6</label>
                         <input type="number" class="sp-value" max="99" name="sp-larm">
                     </div>
 
                     <div>
-                        <label for="sp-rleg">R.Leg 7-8</label>
+                        <label for="sp-rleg">R.Leg<br />7-8</label>
                         <input type="number" class="sp-value" max="99" name="sp-rleg">
                     </div>
 
                     <div>
-                        <label for="sp-lleg">L.Leg 9-10</label>
+                        <label for="sp-lleg">L.Leg<br />9-10</label>
                         <input type="number" class="sp-value" max="99" name="sp-lleg">
                     </div>
                 </div>
@@ -129,10 +129,16 @@
 
                 <div class="weapon">
                     <label for="weapon">Weapon:</label>
-                    <input type="text" class="weapon-name" name="weapon" placeholder="Arasaka Pistol">
+                    <select class="weapon-select" name="weapon">
+                        <option value="">Select weapon</option>
+                    </select>
+
                     <label for="ammo">Ammo:</label>
                     <input type="number" class="ammo" name="ammo" placeholder="15">
+
+                    <p class="weapon-damage-display"></p>
                 </div>
+
 
                 <div class="initiative">
                     <label>Initiative:</label>
@@ -227,12 +233,10 @@
                 </div>
 
                 <footer>
-                    <div id="copyright">
-                        <a href="https://talsorianstore.com/collections/cyberpunk/products/cyberpunk-2020"><img id="r-talsor" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/R._Talsorian_Games_logo.svg" alt="R Talsorian Games"></a>
-                        <p>&copy</p>
-                    </div>
 
                     <p class="disclaimer">
+                        Cyberpunkdataterm is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+                        <br />
                         This is a fan-made project. It is not affiliated with or endorsed by R. Talsorian Games.
                         All trademarks and copyrights are the property of their respective owners.
                     </p>
