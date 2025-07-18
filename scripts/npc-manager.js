@@ -3,6 +3,53 @@ if (params.get("gm") !== "1") {
   document.body.innerHTML = "<h1>ACCESS DENIED</h1><p>This area requires Zeta level clearance.</p>";
 }
 
+let weaponData = [];
+let weaponDataLoaded = false;
+let deferredNpcGroup = null;
+
+fetch('data/weapons.json')
+  .then(response => response.json())
+  .then(data => {
+    weaponData = data;
+    weaponDataLoaded = true;
+    populateAllWeaponSelects();
+
+    // If NPCs were loaded before weapons were ready, load them now
+    if (deferredNpcGroup) {
+      loadGroup(deferredNpcGroup);
+      deferredNpcGroup = null;
+    }
+  })
+  .catch(err => {
+    console.error("Failed to load weapons.json:", err);
+});
+
+function populateWeaponSelect(card) {
+  const select = card.querySelector('.weapon-select');
+  const display = card.querySelector('.weapon-damage-display');
+
+  weaponData.forEach(weapon => {
+    const option = document.createElement("option");
+    option.value = weapon.name;
+    option.textContent = weapon.name;
+    select.appendChild(option);
+  });
+
+  select.addEventListener("change", function () {
+    const selected = weaponData.find(w => w.name === this.value);
+    if (selected) {
+      display.textContent = `Damage: ${selected.damage}, ROF: ${selected.rof}, Ammo: ${selected.ammo}`;
+    } else {
+      display.textContent = "";
+    }
+  });
+}
+
+function populateAllWeaponSelects() {
+  document.querySelectorAll('.npc-card').forEach(card => {
+    populateWeaponSelect(card);
+  });
+}
 
 function addNPC() {
     const template = document.querySelector('#npcTemplate');
@@ -30,8 +77,9 @@ function addNPC() {
         sel.addRange(range);
     }, 10);
 
-}
+    populateWeaponSelect(clone); // To populate weapon options on this new card
 
+}
 
 function rollInitiative(button) {
     const parent = button.closest('.npc-card');
@@ -139,7 +187,7 @@ function saveGroup() {
                 lleg: card.querySelector('[name="sp-lleg"]').value
             },
             hp: card.querySelector('.hp-current').value,
-            weapon: card.querySelector('.weapon-name').value,
+            weapon: card.querySelector('.weapon-select').value,
             ammo: card.querySelector('.ammo').value,
             initiative: card.querySelector('.init-result').textContent
         };
@@ -159,21 +207,24 @@ function saveGroup() {
 }
 
 document.getElementById('loadGroupInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (!file) return;
+  const file = event.target.files[0];
+  if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const contents = e.target.result;
-        try {
-            const npcGroup = JSON.parse(contents);
-            loadGroup(npcGroup);
-        } catch (err) {
-            alert('Invalid file format!');
-            console.error(err);
-        }
-    };
-    reader.readAsText(file);
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const npcGroup = JSON.parse(e.target.result);
+      if (weaponDataLoaded) {
+        loadGroup(npcGroup);
+      } else {
+        deferredNpcGroup = npcGroup;
+      }
+    } catch (err) {
+      alert('Invalid file format!');
+      console.error(err);
+    }
+  };
+  reader.readAsText(file);
 });
 
 function loadGroup(npcGroup) {
@@ -188,13 +239,13 @@ function loadGroup(npcGroup) {
         card.querySelector('h3').textContent = npc.name || 'Unnamed NPC';
         card.querySelector('.int').value = npc.int || '';
         card.querySelector('.ref').value = npc.ref || '';
-        card.querySelector('.tech').value = npc.ref || '';
-        card.querySelector('.cool').value = npc.ref || '';
-        card.querySelector('.attr').value = npc.ref || '';
-        card.querySelector('.luck').value = npc.ref || '';
-        card.querySelector('.ma').value = npc.ref || '';
-        card.querySelector('.body').value = npc.ref || '';
-        card.querySelector('.emp').value = npc.ref || '';
+        card.querySelector('.tech').value = npc.tech || '';
+        card.querySelector('.cool').value = npc.cool || '';
+        card.querySelector('.attr').value = npc.attr || '';
+        card.querySelector('.luck').value = npc.luck || '';
+        card.querySelector('.ma').value = npc.ma || '';
+        card.querySelector('.body').value = npc.body || '';
+        card.querySelector('.emp').value = npc.emp || '';
         card.querySelector('.save').value = npc.save || '';
         card.querySelector('.btm').value = npc.btm || '';
         card.querySelector('[name="sp-head"]').value = npc.sp?.head || '';
@@ -204,10 +255,16 @@ function loadGroup(npcGroup) {
         card.querySelector('[name="sp-rleg"]').value = npc.sp?.rleg || '';
         card.querySelector('[name="sp-lleg"]').value = npc.sp?.lleg || '';
         card.querySelector('.hp-current').value = npc.hp || '40';
-        card.querySelector('.weapon-name').value = npc.weapon || '';
         card.querySelector('.ammo').value = npc.ammo || '';
         card.querySelector('.init-result').textContent = npc.initiative || '0';
 
+        // Append first to ensure DOM access
         container.appendChild(clone);
+
+        // Populate weapon select and set value
+        populateWeaponSelect(card);
+        const weaponSelect = card.querySelector('.weapon-select');
+        weaponSelect.value = npc.weapon || '';
+        weaponSelect.dispatchEvent(new Event("change")); // ✅ Trigger change to update display
     });
 }

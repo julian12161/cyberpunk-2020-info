@@ -1,0 +1,250 @@
+[
+    {
+        "name": "BudgetArms C-13",
+        "type": "Light Autopistol",
+        "damage": "1d6",
+        "rof": 2,
+        "ammo": 8,
+        "notes": ""
+    },
+    {
+        "name": "Dai Lung Cybermag 15",
+        "type": "Light Autopistol",
+        "damage": "1d6+1",
+        "rof": 2,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Federated Arms X-22",
+        "type": "Light Autopistol",
+        "damage": "1d6+1",
+        "rof": 2,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Militech Arms Avenger",
+        "type": "Medium Autopistol",
+        "damage": "2d6+1",
+        "rof": 2,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Dai Lung Streetmaster",
+        "type": "Medium Autopistol",
+        "damage": "2d6+3",
+        "rof": 2,
+        "ammo": 12,
+        "notes": ""
+    },
+    {
+        "name": "Federated Arms X-9mm",
+        "type": "Medium Autopistol",
+        "damage": "2d6+1",
+        "rof": 2,
+        "ammo": 12,
+        "notes": ""
+    },
+    {
+        "name": "BudgetArms Auto 3",
+        "type": "Heavy Autopistol",
+        "damage": "3d6",
+        "rof": 2,
+        "ammo": 8,
+        "notes": ""
+    },
+    {
+        "name": "Sternmeyer Type 35",
+        "type": "Heavy Autopistol",
+        "damage": "3d6",
+        "rof": 2,
+        "ammo": 8,
+        "notes": ""
+    },
+    {
+        "name": "Armalite 44",
+        "type": "Very Heavy Autopistol",
+        "damage": "4d6+1",
+        "rof": 1,
+        "ammo": 8,
+        "notes": ""
+    },
+    {
+        "name": "Colt AMT Model 2000",
+        "type": "Very Heavy Autopistol",
+        "damage": "4d6+1",
+        "rof": 1,
+        "ammo": 8,
+        "notes": ""
+    },
+    {
+        "name": "Uzi Miniauto 9",
+        "type": "Light SMG",
+        "damage": "2d6+1",
+        "rof": 35,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "H&K MP-2013",
+        "type": "Light SMG",
+        "damage": "2d6+3",
+        "rof": 32,
+        "ammo": 35,
+        "notes": ""
+    },
+    {
+        "name": "Fed. Arms Tech Assault II",
+        "type": "Light SMG",
+        "damage": "1d6+1",
+        "rof": 25,
+        "ammo": 50,
+        "notes": ""
+    },
+    {
+        "name": "Arasaka Minami 10",
+        "type": "Medium SMG",
+        "damage": "2d6+3",
+        "rof": 20,
+        "ammo": 40,
+        "notes": ""
+    },
+    {
+        "name": "H&K MPK-9",
+        "type": "Medium SMG",
+        "damage": "2d6+1",
+        "rof": 25,
+        "ammo": 35,
+        "notes": ""
+    },
+    {
+        "name": "Sternmeyer SMG 21",
+        "type": "Heavy SMG",
+        "damage": "3d6",
+        "rof": 15,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "H&K MPK-11",
+        "type": "Heavy SMG",
+        "damage": "4d6+1",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Ingram MAC 14",
+        "type": "Heavy SMG",
+        "damage": "4d6+1",
+        "rof": 10,
+        "ammo": 20,
+        "notes": ""
+    },
+    {
+        "name": "Militech Ronin Light Assault",
+        "type": "Rifle",
+        "damage": "5d6",
+        "rof": 30,
+        "ammo": 35,
+        "notes": ""
+    },
+    {
+        "name": "AKR-20 Medium Assault",
+        "type": "Rifle",
+        "damage": "5d6",
+        "rof": 30,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "FN-RAL Heavy Assault Rifle",
+        "type": "Rifle",
+        "damage": "6d6+2",
+        "rof": 30,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Kalashnikov A-80 Hvy. Rifle",
+        "type": "Rifle",
+        "damage": "6d6+2",
+        "rof": 25,
+        "ammo": 35,
+        "notes": ""
+    },
+    {
+        "name": "Arasaka Rapid Assault 12",
+        "type": "Shotgun",
+        "damage": "4d6",
+        "rof": 10,
+        "ammo": 20,
+        "notes": ""
+    },
+    {
+        "name": "Sternmeyer Stakeout 10",
+        "type": "Shotgun",
+        "damage": "4d6",
+        "rof": 2,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Barret-Arasaka Light 20mm",
+        "type": "Heavy",
+        "damage": "4d10AP",
+        "rof": 1,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Scorpion 16 Missile Launcher",
+        "type": "Heavy",
+        "damage": "7d10",
+        "rof": 1,
+        "ammo": 1,
+        "notes": ""
+    },
+    {
+        "name": "Militech Arms RPG-A",
+        "type": "Heavy",
+        "damage": "6d10",
+        "rof": 1,
+        "ammo": 1,
+        "notes": ""
+    },
+    {
+        "name": "Grenade",
+        "type": "Heavy",
+        "damage": "Varies",
+        "rof": 1,
+        "ammo": 1,
+        "notes": ""
+    },
+    {
+        "name": "C-6 Plastic Explosive",
+        "type": "Heavy",
+        "damage": "8d10/kg",
+        "rof": 1,
+        "ammo": 1,
+        "notes": ""
+    },
+    {
+        "name": "Mine (all types)",
+        "type": "Heavy",
+        "damage": "4d10",
+        "rof": 1,
+        "ammo": 1,
+        "notes": ""
+    },
+    {
+        "name": "K-A F-253 Flamethrower",
+        "type": "Heavy",
+        "damage": "2d10+",
+        "rof": 1,
+        "ammo": 10,
+        "notes": ""
+    }
+]

@@ -19,13 +19,14 @@
     grid-template-columns: repeat(3, 1fr); /* three columns */
     /* gap: 0.5em 1em; */
     margin-top: 1em;
+    border: 1px solid limegreen;
 }
 
 .armor div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid white;
+    border: 1px solid limegreen;
     padding: 1%;
     text-align: center;
 }
@@ -87,9 +88,14 @@ button:hover {
     font-family: monospace;
 }
 
+.weapon select {
+    width: 120px;
+    margin: 2px;
+}
+
 #npcAdd {
     position: sticky;
-    top: 0;
+    top: 26px;
     z-index: 2;
 }
 
@@ -101,6 +107,9 @@ button:hover {
     display: flex;
     width: 100%;
     gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 #save-load button {
