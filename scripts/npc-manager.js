@@ -99,7 +99,12 @@ function applyDamage(button) {
     const spField = card.querySelector(`[name="sp-${location}"]`);
     const sp = parseInt(spField.value) || 0;
 
-    const effectiveDmg = Math.max(0, dmg - sp - btm);
+    let effectiveDmg = dmg - sp - btm;
+    if (dmg > sp && effectiveDmg <= 0) {
+      effectiveDmg = 1; // BTM reduced damage to 0 or less, but it penetrated armor
+    } else {
+      effectiveDmg = Math.max(0, effectiveDmg);
+    }
 
     // Update SP if it absorbed some
     if (dmg > sp) {

@@ -152,6 +152,7 @@ nav {
     justify-content: space-between;
     justify-self: center;
     height: 16px;
+    margin-bottom: 4px;
 }
 
 #topicBox h4 {
@@ -207,6 +208,10 @@ nav {
     scale: 75%;
     width: 120px;
     height: 16px;
+}
+
+#alsoBox h4 {
+    margin: 0;
 }
 
 #arrowStretch {
