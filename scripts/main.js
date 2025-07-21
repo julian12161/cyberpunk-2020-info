@@ -33,7 +33,7 @@ document.documentElement.classList.remove("no-js");
 function checkAccess() {
   const pw = prompt("Zeta Security Clearance Required:");
 
-  if (pw.toUpperCase() === "ZETAPROTOCOL") {
+  if (pw.toUpperCase().replaceAll(' ', '') === "ZETAPROTOCOL") {
     // Navigate to your NPC Manager
     window.location.href = `${prefix}gm-hub.html?gm=1`;
   } else {
