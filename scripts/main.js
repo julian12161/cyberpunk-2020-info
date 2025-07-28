@@ -14,7 +14,9 @@ const links = [
   `${prefix}corporations.html`,
   `${prefix}message.html`,
   `${prefix}NCPD.html`,
-  `${prefix}combat.html`
+  `${prefix}Edgerunners.html`,
+  `${prefix}combat.html`,
+  `${prefix}resources.html`
 ];
 
 // skip the first button (ACCESS BLOCKED)
