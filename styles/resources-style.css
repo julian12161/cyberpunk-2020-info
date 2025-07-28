@@ -5,7 +5,7 @@
   color: #0f0; /* terminal green */
 }
 
-h2 {
+#content h2 {
   font-size: 1rem;
   text-transform: uppercase;
   color: #aaa;
