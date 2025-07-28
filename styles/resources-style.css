@@ -1,0 +1,68 @@
+/* resources.css */
+
+#content {
+  padding: 1.5em;
+  color: #0f0; /* terminal green */
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 2em;
+  font-style: italic;
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 0.3em;
+}
+
+.resource-entry {
+  border: 1px solid #0f0;
+  padding: 1em;
+  margin-bottom: 2em;
+  background: black;
+  box-shadow: 0 0 5px #0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-entry h3 {
+  font-size: 1.1em;
+  color: #0f0;
+  margin: 0 0 0.5em 0;
+  letter-spacing: 1px;
+}
+
+.resource-entry p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  color: #b0f0b0;
+}
+
+.resource-entry ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.resource-entry li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+}
+
+.resource-entry a {
+  text-decoration: none;
+  color: #0f0;
+  font-weight: bold;
+  border-bottom: 1px dashed #0f0;
+  transition: color 0.2s ease;
+}
+
+.resource-entry a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 800px) {
+  .resource-entry {
+    padding: 1em 0.5em;
+  }
+}

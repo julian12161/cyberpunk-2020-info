@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll(".mobileButton");
 
 let prefix;
-if (window.location.pathname.includes("/edgerunners/")) {
+if (window.location.pathname.includes("/edgerunners/") || window.location.pathname.includes("/locations/")) {
   prefix = "../";
 } else {
   prefix = './'
