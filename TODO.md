@@ -27,7 +27,7 @@ This file outlines planned features, future enhancements, and potential ideas fo
 - [ ] Calculator toggle on NPC Manager
 - [ ] Add “encounter mode” to track Characters in active initiative order
 - [ ] Combat log auto-scrolls or collapses old turns
-- [ ] Support for exporting / importing NPCs via JSON
+- [x] Support for exporting / importing NPCs via JSON
 - [ ] Ability to save/load player-submitted messages (mock Netwatch review inbox)
 - [ ] GM notifications for expiring messages (48-hour rule)
 - [ ] Optional dice roll history in NPC Manager
@@ -47,7 +47,7 @@ This file outlines planned features, future enhancements, and potential ideas fo
 ## 🧰 FUTURE GM TOOLS
 
 - [ ] Player profiles / logins (even if just localStorage)
-- [ ] Timeline tracker or mission logbook
+- [x] Timeline tracker or mission logbook
 - [ ] Cyberware inventory / usage tracker (basic list + notes)
 - [ ] Netwatch simulation terminal (lore + rule hints)
 - [ ] Dataterm admin panel (CRUD messages, view logs)
@@ -58,6 +58,6 @@ This file outlines planned features, future enhancements, and potential ideas fo
 ## 🖼 VISUAL / IMMERSION POLISH
 
 - [ ] CRT scanline overlay toggle (pure CSS or canvas) // Maybe
-- [ ] Make NPC Manager feel more like a Militech deck
+- [ ] Make NPC Manager feel more like a Netwatch deck
 - [ ] Add flickering “LOADING…” animation during page loads // Maybe
 - [ ] Consider weather or broadcast messages on homepage
