@@ -33,12 +33,16 @@
 
 .armor input {
     width: 3em;
+    color: limegreen;
+    background-color: black;
 }
 
 .stats input {
     width: 60px;
     margin: 2px;
     font-family: monospace;
+    color: limegreen;
+    background-color: black;
 }
 
 button {
@@ -67,6 +71,8 @@ button:hover {
     width: 60px;
     margin: 2px;
     font-family: monospace;
+    color: limegreen;
+    background-color: black;
 }
 
 .stats {
@@ -80,17 +86,38 @@ button:hover {
     width: 60px;
     margin: 2px;
     font-family: monospace;
+    color: limegreen;
+    background-color: black;
 }
 
 .weapon input {
     width: 60px;
     margin: 2px;
     font-family: monospace;
+    color: limegreen;
+    background-color: black;
+}
+
+.weapon select, .hit-loc {
+    font-family: monospace;
+    color: white;
+    background-color: #222;
+    border: 1px solid limegreen;
+    appearance: none; /* hides native OS styles */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22limegreen%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpolygon%20points%3D%225%2C7%2010%2C12%2015%2C7%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 12px;
+    padding-right: 24px;
 }
 
 .weapon select {
     width: 120px;
-    margin: 2px;
+}
+
+.weapon select:hover, .hit-loc:hover {
+    background-color: limegreen;
+    color: black;
 }
 
 #npcAdd {
