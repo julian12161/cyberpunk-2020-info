@@ -20,14 +20,19 @@ h4 {
     width: auto;
 }
 
-#runNet {
+.netrunner-links {
     text-decoration: none;
     color: black;
+    padding: 3px;
     border: 1px solid black;
     transition-duration: 0.4s;
 }
 
-#runNet:hover {
+.netrunner-links:hover {
     background-color: black;
     color: white;
+}
+
+#bonuses li {
+    margin: 10px 0;
 }
