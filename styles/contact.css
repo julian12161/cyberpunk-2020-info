@@ -8,11 +8,14 @@
 }
 
 .outputBox {
-    border: 1px solid black;
+    border: 1px solid red;
     padding: 8px;
     margin-top: 10px;
     justify-self: center;
     text-align: center;
+    background-color: black;
+    color: red;
+    box-shadow: 0 0 5px red;
 }
 
 .hiddenBorder {
@@ -37,5 +40,20 @@ input[type="radio"]:checked {
 
 label {
     font-family: monospace;
-    color: black;
+    color: white;
+}
+
+#capabilitySection, #reputationSection, #availabilitySection, #reliabilitySection {
+    color: limegreen;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid limegreen;
+    box-shadow: 0 0 5px limegreen;
+}
+
+@media (max-width: 800px) {
+    #sections {
+        flex-wrap: wrap;
+    }
 }
