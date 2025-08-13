@@ -1,0 +1,43 @@
+#family-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.generation.parents, .generation.children {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.person {
+    border: 2px solid #888;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+.person.female {
+    border-radius: 45px;
+}
+
+.person.self { background-color: white; border-color: black; }
+.person.love { background-color: #00e676; border-color: #00a344; }
+.person.like { background-color: #a0e6a0; border-color: #3a803a; }
+.person.neutral { background-color: #f9f1a5; border-color: #c3b34b; }
+.person.dislike { background-color: #f4a0a0; border-color: #b33a3a; }
+.person.hate { background-color: #e74c3c; border-color: #b31c1c; }
+
+#info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.box {
+    border: 1px solid black;
+    min-width: 30%;
+    text-align: center;
+}
