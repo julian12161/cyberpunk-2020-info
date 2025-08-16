@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mark</title>
+        <link rel="stylesheet" href="../styles/general-style.css">
+        <link rel="stylesheet" href="../styles/player-style.css">
+        <link rel="stylesheet" href="../styles/mobile-style.css" media="(max-width: 800px)">
+        <script async src="../scripts/main.js"></script>
+        <script defer src="../scripts/crt.js"></script>
+        <script defer src="../scripts/player.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="mobileNav">
+                <button class="mobileButton access-blocked">ACCESS RESTRICTED</button>
+                <button class="mobileButton">Welcome</button>
+                <button class="mobileButton">Nightcity</button>
+                <button class="mobileButton">Corporations</button>
+                <button class="mobileButton">Messages</button>
+                <button class="mobileButton">NCPD</button>
+                <button class="mobileButton">Edgerunners</button>
+                <button class="mobileButton">Combat 101</button>
+                <button class="mobileButton">Resources</button>
+            </div>
+            <nav>
+                <h2>MASTER<br />ENTRY<br />INDEX</h2>
+                <div id="masterIndex">
+                    <div>
+                        <a href="#" onclick="checkAccess()"><li class="index access-blocked">ACCESS RESTRICTED</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../index.html"><li class="index">Welcome</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../nightcity.html"><li class="index">Nightcity</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../corporations.html"><li class="index">Corporation Report</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../message.html"><li class="index">Message Mail</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../NCPD.html"><li class="index">NCPD</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../Edgerunners.html"><li class="index">Edgerunners</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../combat.html"><li class="index">Combat 101</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../resources.html"><li class="index">Resources</li></a>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="main">
+                <header>
+                    <h1>Mugwe Ubabwe Okoko</h1>
+                </header>
+
+                <div id="topicBox">
+                    <h4 class="DDS">DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: Viper</h5>
+                    <div id=arrowUp>
+                        <img src="../arrow.png" id="arrow">
+                        <a href="../players.html" id="up"><h5>UP</h5></a>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div id="family-tree">
+                        <!-- Parents -->
+                        <div class="generation parents">
+                            <div class="person neutral female" id="parent1">Sodwa Fahmi Mosokokoko (Mother)</div>
+                            <div class="person neutral" id="parent2">Abraham Weh Ubwe Okoko (Father)</div>
+                        </div>
+
+                        <!-- SVG connector -->
+                        <svg id="tree-lines" width="100%" height="100">
+                            <!-- Lines will be drawn via JS -->
+                        </svg>
+
+                        <!-- Children -->
+                        <div class="generation children">
+                            <div class="person hate">Jabari Oro Okoko (Older)</div>
+                            <div class="person neutral">Kwame Ogwe Urama Okoko (Twin)</div>
+                            <div class="person dislike">Kofi Unana Arobo Okoko (Twin)</div>
+                            <div class="person self">Viper</div>
+                            <div class="person like female">Lisa Okoko (Twin)</div>
+                            <div class="person like female">Chike Urissa Ubo Bulele (Younger)</div>
+                            <div class="person like">Ade Adjala Okoko (Younger)</div>
+                            <div class="person love female">Ayana Abeba Siye Unama Olulu (Younger)</div>
+                        </div>
+                    </div>
+
+                    <div id="info">
+                        <div class="box">
+                            <h3>Player:</h3>
+                            <p>Mark</p>
+                        </div>
+
+                        <div class="box">
+                            <h3>Handle</h3>
+                            <p>Viper</p>
+                        </div>
+
+                        <div class="box">
+                            <h3>Contacts:</h3>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+
+                    <p class="disclaimer">
+                        Cyberpunkdataterm is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+                        <br />
+                        This is a fan-made project. It is not affiliated with or endorsed by R. Talsorian Games.
+                        All trademarks and copyrights are the property of their respective owners.
+                    </p>
+
+                    <a href="https://github.com/julian12161/cyberpunk-2020-info/issues" id="contact">Contact me</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
