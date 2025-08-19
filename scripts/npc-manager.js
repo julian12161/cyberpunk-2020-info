@@ -58,7 +58,7 @@ function addNPC() {
 
     clone.querySelector('h3').textContent = "Unnamed NPC";
     clone.querySelector('.log').innerHTML = '';
-    clone.querySelector('.init-result').textContent = "0";
+    clone.querySelector('.skill-list').value = "";
     clone.querySelector('.hp-current').value = "40"; // Ensure starting HP
 
     content.appendChild(clone);
@@ -81,13 +81,28 @@ function addNPC() {
 
 }
 
-function rollInitiative(button) {
-    const parent = button.closest('.npc-card');
-    const base = parseInt(parent.querySelector('.ref').value) || 0;
-    const mod = parseInt(prompt("Enter Combat Sense", "0")) || 0;
-    const roll = Math.ceil(Math.random() * 10);
-    const total = base + mod + roll;
-    parent.querySelector('.init-result').textContent = total;
+function shootWeapon(button, mode) {
+    const card = button.closest('.npc-card');
+    const ammoField = card.querySelector('.ammo');
+    let ammo = parseInt(ammoField.value) || 0;
+    const weaponName = card.querySelector('.weapon-select').value || "weapon";
+    const log = card.querySelector('.log');
+
+    let shots = 1;
+
+    if (mode === 3) {
+        shots = 3; // burst fire
+    } else if (mode === "auto") {
+        // Ask GM how many rounds to dump
+        shots = parseInt(prompt("Enter number of rounds for full auto:", "10")) || 0;
+    }
+
+    if (ammo >= shots) {
+        ammoField.value = ammo - shots;
+        log.innerHTML += `Fired ${shots} round(s) from ${weaponName} → Ammo left: ${ammo - shots}<br>`;
+    } else {
+        log.innerHTML += `CLICK! (${weaponName} is out of ammo)<br>`;
+    }
 }
 
 function applyDamage(button) {
@@ -194,7 +209,7 @@ function saveGroup() {
             hp: card.querySelector('.hp-current').value,
             weapon: card.querySelector('.weapon-select').value,
             ammo: card.querySelector('.ammo').value,
-            initiative: card.querySelector('.init-result').textContent
+            skills: card.querySelector('.skill-list').value
         };
 
         npcData.push(data);
@@ -261,7 +276,7 @@ function loadGroup(npcGroup) {
         card.querySelector('[name="sp-lleg"]').value = npc.sp?.lleg || '';
         card.querySelector('.hp-current').value = npc.hp || '40';
         card.querySelector('.ammo').value = npc.ammo || '';
-        card.querySelector('.init-result').textContent = npc.initiative || '0';
+        card.querySelector('.skill-list').value = npc.skills || '';
 
         // Append first to ensure DOM access
         container.appendChild(clone);
