@@ -1,0 +1,21 @@
+function changeFloor(floor) {
+    const map = document.getElementById("precinctMap");
+    const buttons = document.querySelectorAll("#buttons button");
+
+    // reset buttons
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    if (floor === "basement") {
+        map.src = "../maps/NCPD/UndergroundGL.jpg";
+        buttons[0].classList.add("active");
+    } else if (floor === "ground") {
+        map.src = "../maps/NCPD/BaseDay.png";
+        buttons[1].classList.add("active");
+    } else if (floor === "first") {
+        map.src = "../maps/NCPD/1stFloorGL.jpg";
+        buttons[2].classList.add("active");
+    } else if (floor === "second") {
+        map.src = "../maps/NCPD/2ndFloorGL.jpg";
+        buttons[3].classList.add("active");
+    }
+}

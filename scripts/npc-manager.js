@@ -51,6 +51,26 @@ function populateAllWeaponSelects() {
   });
 }
 
+function calculateBTM(body) {
+  if (body >= 11) return -5;
+  if (body === 10) return -4;
+  if (body >= 8) return -3;
+  if (body >= 5) return -2;
+  if (body >= 3) return -1;
+  if (body === 2) return 0;
+  return 0;
+}
+
+function setupBTMAutoCalc(card) {
+  const bodyInput = card.querySelector('.body');
+  const btmInput = card.querySelector('.btm');
+
+  bodyInput.addEventListener('input', () => {
+    const bodyVal = parseInt(bodyInput.value) || 0;
+    btmInput.value = calculateBTM(bodyVal);
+  });
+}
+
 function addNPC() {
     const template = document.querySelector('#npcTemplate');
     const content = document.querySelector('#content');
@@ -78,6 +98,7 @@ function addNPC() {
     }, 10);
 
     populateWeaponSelect(clone); // To populate weapon options on this new card
+    setupBTMAutoCalc(clone);
 
 }
 
@@ -286,5 +307,8 @@ function loadGroup(npcGroup) {
         const weaponSelect = card.querySelector('.weapon-select');
         weaponSelect.value = npc.weapon || '';
         weaponSelect.dispatchEvent(new Event("change")); // ✅ Trigger change to update display
+
+        setupBTMAutoCalc(card);
+
     });
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NCPD Precinct</title>
+        <link rel="stylesheet" href="../styles/general-style.css">
+        <link rel="stylesheet" href="../styles/drug-lab-style.css">
+        <link rel="stylesheet" href="../styles/precinct-style.css">
+        <link rel="stylesheet" href="../styles/mobile-style.css" media="(max-width: 800px)">
+        <script async src="../scripts/main.js"></script>
+        <script defer src="../scripts/crt.js"></script>
+        <script defer src="../scripts/precinct-script"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="mobileNav">
+                <button class="mobileButton access-blocked">ACCESS RESTRICTED</button>
+                <button class="mobileButton">Welcome</button>
+                <button class="mobileButton">Nightcity</button>
+                <button class="mobileButton">Corporations</button>
+                <button class="mobileButton">Messages</button>
+                <button class="mobileButton">NCPD</button>
+                <button class="mobileButton">Edgerunners</button>
+                <button class="mobileButton">Combat 101</button>
+                <button class="mobileButton">Resources</button>
+            </div>
+            <nav>
+                <h2>MASTER<br />ENTRY<br />INDEX</h2>
+                <div id="masterIndex">
+                    <div>
+                        <a href="#" onclick="checkAccess()"><li class="index access-blocked">ACCESS RESTRICTED</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../index.html"><li class="index">Welcome</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../nightcity.html"><li class="index">Nightcity</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../corporations.html"><li class="index">Corporation Report</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../message.html"><li class="index">Message Mail</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../NCPD.html"><li class="index">NCPD</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../Edgerunners.html"><li class="index">Edgerunners</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../combat.html"><li class="index">Combat 101</li></a>
+                    </div>
+
+                    <div>
+                        <a href="../resources.html"><li class="index">Resources</li></a>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="main">
+                <header>
+                    <h1>Old Downtown Precinct 12</h1>
+                </header>
+
+                <div id="topicBox">
+                    <h4 class="DDS">DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: NCPD Precinct</h5>
+                    <div id=arrowUp>
+                        <img src="../arrow.png" id="arrow">
+                        <a href="../operations.html" id="up"><h5>UP</h5></a>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <div>
+                        <h3>Precinct 12</h3>
+                    </div>
+                    <div id="map">
+                        <div>
+                            <div id="buttons">
+                                <button onclick="changeFloor('basement')">Basement</button>
+                                <button onclick="changeFloor('ground')">Ground</button>
+                                <button onclick="changeFloor('first')">First</button>
+                                <button onclick="changeFloor('second')">Second</button>
+                            </div>
+                            <img id="precinctMap" src="../maps/NCPD/BaseDay.png" alt="Precinct 12">
+                        </div>
+
+                        <div id="legend">
+                            <h3>Main Map Zones</h3>
+                            <ol>
+                                <li><h4>Basement:</h4></li>
+                                <ul>
+                                    <li><strong>Storage:</strong> Dimly lit, dusty shelves crammed with crates of outdated uniforms, surplus gear, and broken drones. Smells faintly of mildew.</li>
+                                    <li><strong>Armoury & Guard Room:</strong> Two reinforced doors. Inside: racks of rifles, smartguns, and riot shields under heavy maglock security. Guard room has two officers on rotation playing cards or scanning cams.</li>
+                                    <li><strong>Evidence Locker:</strong> Sealed with biometric locks. Rows of labeled shelves and cages containing everything from cheap pistols to cyberware pieces and narcotics. An old camera blinks lazily in the corner.</li>
+                                </ul>
+                                <li><h4>Ground Floor:</h4></li>
+                                <ul>
+                                    <li><strong>Surveillance Room:</strong> Bank of holo-monitors covering street cams, bodycams, and inside feeds. Operators rarely look up unless alarms ping.</li>
+                                    <li><strong>Conference Room:</strong> Glass-walled, with a long table, smartboard covered in half-erased diagrams, and cheap coffee machine.</li>
+                                    <li><strong>Locker Rooms:</strong> Metal lockers with peeling stickers. The air is thick with deodorant, sweat, and gun oil.</li>
+                                    <li><strong>Bullpen:</strong> Rows of desks cluttered with files, braindance recorders, and cold noodles. Phones buzz constantly. The atmosphere is barely controlled chaos.</li>
+                                </ul>
+                                <li><h4>1st Floor:</h4></li>
+                                <ul>
+                                    <li><strong>Detective Room:</strong> Quieter but more hostile. Detectives lean over cluttered desks, slamming phones, chain-smoking, glaring at anyone out of place.</li>
+                                    <li><strong>Toilets:</strong> Graffiti scratched into the stalls; plumbing barely works.</li>
+                                    <li><strong>Printers/Records:</strong> Endless stacks of paper files nobody wants to digitize.</li>
+                                    <li><strong>Briefing Room:</strong> Rows of chairs facing a podium and wall monitor. Used for roll calls and chewing-out sessions.</li>
+                                    <li><strong>IT:</strong> Rows of terminals, junior techies half-asleep under holo-screens. Netrunner security software on constant alert.</li>
+                                    <li><strong>Common Room:</strong> Sofa with broken springs, vending machines, big trid screen stuck on reruns. Feels like home for cops working 16-hour shifts.</li>
+                                    <li><strong>Holding Cell (Short-Term):</strong> Chain-link cages with benches. Drunks, gangers, and unlucky scavs packed shoulder to shoulder. Smell of sweat and piss hangs heavy.</li>
+                                </ul>
+                                <li><h4>2nd Floor:</h4></li>
+                                <ul>
+                                    <li><strong>Interrogation Room:</strong> Bright light, one-way mirror, steel table. Chairs bolted to the floor. Interrogators swap in and out.</li>
+                                    <li><strong>Toilets:</strong> Marginally cleaner than the first floor, reserved for detectives.</li>
+                                    <li><strong>Chief's Office:</strong> Large wood desk, holo-plaque reading “Serve and Protect”. Expensive bourbon bottle behind the chair. Reinforced door.</li>
+                                    <li><strong>Homicide Detectives:</strong> A smaller bullpen, quieter, walls plastered with murder boards and crime scene holos.</li>
+                                    <li><strong>Holding Cell (Long-Term):</strong> More secure cells with reinforced doors, individual bunk and sink. Used for those awaiting transfer.</li>
+                                    <li><strong>Roof Access:</strong> Steel hatch leads up. HVAC units hum. Sometimes snipers or patrol drones are stationed here during alerts.</li>
+                                    <li><strong>Chief’s Storage Room:</strong> Locked side office — contains sensitive files, old case archives, and maybe a few things the Chief doesn’t want anyone to see.</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+
+                    <p class="disclaimer">
+                        Cyberpunkdataterm is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+                        <br />
+                        This is a fan-made project. It is not affiliated with or endorsed by R. Talsorian Games.
+                        All trademarks and copyrights are the property of their respective owners.
+                    </p>
+
+                    <a href="https://github.com/julian12161/cyberpunk-2020-info/issues" id="contact">Contact me</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
