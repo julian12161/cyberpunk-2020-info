@@ -230,6 +230,7 @@ function saveGroup() {
             hp: card.querySelector('.hp-current').value,
             weapon: card.querySelector('.weapon-select').value,
             ammo: card.querySelector('.ammo').value,
+            equipment: card.querySelector('.equipment-list').value,
             skills: card.querySelector('.skill-list').value
         };
 
@@ -297,6 +298,7 @@ function loadGroup(npcGroup) {
         card.querySelector('[name="sp-lleg"]').value = npc.sp?.lleg || '';
         card.querySelector('.hp-current').value = npc.hp || '40';
         card.querySelector('.ammo').value = npc.ammo || '';
+        card.querySelector('.equipment-list').value = npc.equipment || '';
         card.querySelector('.skill-list').value = npc.skills || '';
 
         // Append first to ensure DOM access
