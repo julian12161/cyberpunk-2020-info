@@ -24,6 +24,22 @@
         "notes": ""
     },
     {
+        "name": "Colt .38 Detective",
+        "type": "Old Pistol",
+        "damage": "1d6+2",
+        "rof": 1,
+        "ammo": 6,
+        "notes": ""
+    },
+    {
+        "name": "C.O.P .357 Derringer",
+        "type": "Old Pistol",
+        "damage": "2d6+3",
+        "rof": 2,
+        "ammo": 4,
+        "notes": ""
+    },
+    {
         "name": "Militech Arms Avenger",
         "type": "Medium Autopistol",
         "damage": "2d6+1",

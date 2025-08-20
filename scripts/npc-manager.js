@@ -51,6 +51,26 @@ function populateAllWeaponSelects() {
   });
 }
 
+function calculateBTM(body) {
+  if (body >= 11) return -5;
+  if (body === 10) return -4;
+  if (body >= 8) return -3;
+  if (body >= 5) return -2;
+  if (body >= 3) return -1;
+  if (body === 2) return 0;
+  return 0;
+}
+
+function setupBTMAutoCalc(card) {
+  const bodyInput = card.querySelector('.body');
+  const btmInput = card.querySelector('.btm');
+
+  bodyInput.addEventListener('input', () => {
+    const bodyVal = parseInt(bodyInput.value) || 0;
+    btmInput.value = calculateBTM(bodyVal);
+  });
+}
+
 function addNPC() {
     const template = document.querySelector('#npcTemplate');
     const content = document.querySelector('#content');
@@ -58,7 +78,7 @@ function addNPC() {
 
     clone.querySelector('h3').textContent = "Unnamed NPC";
     clone.querySelector('.log').innerHTML = '';
-    clone.querySelector('.init-result').textContent = "0";
+    clone.querySelector('.skill-list').value = "";
     clone.querySelector('.hp-current').value = "40"; // Ensure starting HP
 
     content.appendChild(clone);
@@ -78,16 +98,32 @@ function addNPC() {
     }, 10);
 
     populateWeaponSelect(clone); // To populate weapon options on this new card
+    setupBTMAutoCalc(clone);
 
 }
 
-function rollInitiative(button) {
-    const parent = button.closest('.npc-card');
-    const base = parseInt(parent.querySelector('.ref').value) || 0;
-    const mod = parseInt(prompt("Enter Combat Sense", "0")) || 0;
-    const roll = Math.ceil(Math.random() * 10);
-    const total = base + mod + roll;
-    parent.querySelector('.init-result').textContent = total;
+function shootWeapon(button, mode) {
+    const card = button.closest('.npc-card');
+    const ammoField = card.querySelector('.ammo');
+    let ammo = parseInt(ammoField.value) || 0;
+    const weaponName = card.querySelector('.weapon-select').value || "weapon";
+    const log = card.querySelector('.log');
+
+    let shots = 1;
+
+    if (mode === 3) {
+        shots = 3; // burst fire
+    } else if (mode === "auto") {
+        // Ask GM how many rounds to dump
+        shots = parseInt(prompt("Enter number of rounds for full auto:", "10")) || 0;
+    }
+
+    if (ammo >= shots) {
+        ammoField.value = ammo - shots;
+        log.innerHTML += `Fired ${shots} round(s) from ${weaponName} → Ammo left: ${ammo - shots}<br>`;
+    } else {
+        log.innerHTML += `CLICK! (${weaponName} is out of ammo)<br>`;
+    }
 }
 
 function applyDamage(button) {
@@ -194,7 +230,8 @@ function saveGroup() {
             hp: card.querySelector('.hp-current').value,
             weapon: card.querySelector('.weapon-select').value,
             ammo: card.querySelector('.ammo').value,
-            initiative: card.querySelector('.init-result').textContent
+            equipment: card.querySelector('.equipment-list').value,
+            skills: card.querySelector('.skill-list').value
         };
 
         npcData.push(data);
@@ -261,7 +298,8 @@ function loadGroup(npcGroup) {
         card.querySelector('[name="sp-lleg"]').value = npc.sp?.lleg || '';
         card.querySelector('.hp-current').value = npc.hp || '40';
         card.querySelector('.ammo').value = npc.ammo || '';
-        card.querySelector('.init-result').textContent = npc.initiative || '0';
+        card.querySelector('.equipment-list').value = npc.equipment || '';
+        card.querySelector('.skill-list').value = npc.skills || '';
 
         // Append first to ensure DOM access
         container.appendChild(clone);
@@ -271,5 +309,8 @@ function loadGroup(npcGroup) {
         const weaponSelect = card.querySelector('.weapon-select');
         weaponSelect.value = npc.weapon || '';
         weaponSelect.dispatchEvent(new Event("change")); // ✅ Trigger change to update display
+
+        setupBTMAutoCalc(card);
+
     });
 }

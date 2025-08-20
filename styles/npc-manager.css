@@ -142,3 +142,51 @@ button:hover {
 #save-load button {
     width: 100%;
 }
+
+.skills, .equipment {
+    margin-top: 1em;
+    width: 100%;
+    color: limegreen;
+}
+
+.skills summary, .equipment summary {
+    cursor: pointer;
+    background: #222;
+    border: 1px solid limegreen;
+    padding: 2px 6px;
+    font-family: monospace;
+}
+
+.skill-list, .equipment-list {
+    width: 95%;
+    min-height: 5em;
+    margin-top: 0.5em;
+    background-color: black;
+    color: limegreen;
+    border: 1px solid limegreen;
+    font-family: monospace;
+    padding: 4px;
+    resize: vertical;
+}
+
+.fire-controls {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.shoot-button {
+    background-color: #222;
+    color: white;
+    border: 1px solid limegreen;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.shoot-button:hover {
+    background-color: limegreen;
+    color: black;
+}

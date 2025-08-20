@@ -70,7 +70,7 @@
                 <div class="stats">
                     <input type="number" class="save" name="save">
 
-                    <input type="number" class="btm" name="btm">
+                    <input type="number" class="btm" name="btm" readonly>
                 </div>
 
                 <div class="armor">
@@ -137,14 +137,22 @@
                     <input type="number" class="ammo" name="ammo" placeholder="15">
 
                     <p class="weapon-damage-display"></p>
+                    <div class="fire-controls">
+                        <button class="shoot-button" onclick="shootWeapon(this, 1)">Single</button>
+                        <button class="shoot-button" onclick="shootWeapon(this, 3)">Burst</button>
+                        <button class="shoot-button" onclick="shootWeapon(this, 'auto')">Full Auto</button>
+                    </div>
                 </div>
 
+                <details class="equipment">
+                    <summary>Equipment</summary>
+                    <textarea class="equipment-list" placeholder="Militech Arms Avenger"></textarea>
+                </details>
 
-                <div class="initiative">
-                    <label>Initiative:</label>
-                    <span class="init-result">0</span>
-                    <button onclick="rollInitiative(this)">Roll</button>
-                </div>
+                <details class="skills">
+                    <summary>Skills</summary>
+                    <textarea class="skill-list" placeholder="Handgun 6&#10;Awareness 5"></textarea>
+                </details>
 
                 <div class="log" style="margin-top: 1em; font-size: 0.9em; font-family: monospace;"></div>
 

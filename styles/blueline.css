@@ -1,0 +1,32 @@
+#map img {
+    border: 3px solid #49c3cb;
+    padding: 10px;
+    border-top-right-radius: 25%;
+    background-color: #272d2d;
+}
+
+#first {
+    border-left: 0px;
+}
+
+#map button {
+    border: 3px solid #49c3cb;
+    background-color: #272d2d;
+    color: #49c3cb;
+    border-bottom: 0px;
+}
+
+#map button:hover {
+    background-color: #49c3cb;
+    color: #272d2d;
+}
+
+#buttons button.active {
+    background-color: #49c3cb;
+    color: #272d2d;
+}
+
+
+#buttons {
+    display: flex;
+}
