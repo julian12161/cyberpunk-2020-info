@@ -232,7 +232,8 @@ function saveGroup() {
             ammo: card.querySelector('.ammo').value,
             equipment: card.querySelector('.equipment-list').value,
             cyberware: card.querySelector('.cyberware-list').value,
-            skills: card.querySelector('.skill-list').value
+            skills: card.querySelector('.skill-list').value,
+            lifepath: card.querySelector('.lifepath-list').value
         };
 
         npcData.push(data);
@@ -302,6 +303,7 @@ function loadGroup(npcGroup) {
         card.querySelector('.equipment-list').value = npc.equipment || '';
         card.querySelector('.cyberware-list').value = npc.cyberware || '';
         card.querySelector('.skill-list').value = npc.skills || '';
+        card.querySelector('.lifepath-list').value = npc.lifepath || '';
 
         // Append first to ensure DOM access
         container.appendChild(clone);
