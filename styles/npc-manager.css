@@ -190,3 +190,7 @@ button:hover {
     background-color: limegreen;
     color: black;
 }
+
+input {
+    border: 2px solid limegreen;
+}
