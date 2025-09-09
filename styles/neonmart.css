@@ -7,3 +7,13 @@
     height: 756px;
     width: 540px;
 }
+
+#buttons {
+  text-align: center;
+}
+
+#map img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

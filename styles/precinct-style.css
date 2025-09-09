@@ -32,3 +32,13 @@
 #buttons {
     display: flex;
 }
+
+#buttons {
+  text-align: center;
+}
+
+#map img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

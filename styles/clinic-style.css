@@ -11,3 +11,13 @@
     height: 500px;
     width: 500px;
 }
+
+#buttons {
+  text-align: center;
+}
+
+#map img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

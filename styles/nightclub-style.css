@@ -3,3 +3,13 @@
     flex-direction: row;
     text-align: center;
 }
+
+#buttons {
+  text-align: center;
+}
+
+#map img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
