@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NPCs</title>
+        <link rel="stylesheet" href="/styles/general-style.css">
+        <link rel="stylesheet" href="/styles/npc-style.css">
+        <link rel="stylesheet" href="/styles/mobile-style.css" media="(max-width: 800px)">
+        <script async src="/scripts/main.js"></script>
+        <script defer src="/scripts/crt.js"></script>
+        <script src="/scripts/npc.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="mobileNav">
+                <button class="mobileButton access-blocked">ACCESS RESTRICTED</button>
+                <button class="mobileButton">Welcome</button>
+                <button class="mobileButton">Nightcity</button>
+                <button class="mobileButton">Corporations</button>
+                <button class="mobileButton">Messages</button>
+                <button class="mobileButton">NCPD</button>
+                <button class="mobileButton">Edgerunners</button>
+                <button class="mobileButton">Combat 101</button>
+                <button class="mobileButton">Resources</button>
+            </div>
+            <nav>
+                <h2>MASTER<br />ENTRY<br />INDEX</h2>
+                <div id="masterIndex">
+                    <div>
+                        <a href="#" onclick="checkAccess()"><li class="index access-blocked">ACCESS RESTRICTED</li></a>
+                    </div>
+
+                    <div>
+                        <a href="index.html"><li class="index">Welcome</li></a>
+                    </div>
+
+                    <div>
+                        <a href="nightcity.html"><li class="index">Nightcity</li></a>
+                    </div>
+
+                    <div>
+                        <a href="corporations.html"><li class="index">Corporation Report</li></a>
+                    </div>
+
+                    <div>
+                        <a href="message.html"><li class="index">Message Mail</li></a>
+                    </div>
+
+                    <div>
+                        <a href="NCPD.html"><li class="index">NCPD</li></a>
+                    </div>
+
+                    <div>
+                        <a href="Edgerunners.html"><li class="index">Edgerunners</li></a>
+                    </div>
+
+                    <div>
+                        <a href="combat.html"><li class="index">Combat 101</li></a>
+                    </div>
+
+                    <div>
+                        <a href="resources.html"><li class="index">Resources</li></a>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div id="main">
+                <header>
+                    <h1></h1>
+                </header>
+
+                <div id="topicBox">
+                    <h4 class="DDS">DATATERM DISPLAY SYSTEM</h4>
+                    <h5 id="topic">Topic: NPCs</h5>
+                    <div id=arrowUp>
+                        <img src="arrow.png" id="arrow">
+                        <a href="operations.html" id="up"><h5>UP</h5></a>
+                    </div>
+                </div>
+
+                <div id="content">
+                <div id="stats-lifepath">
+                    <div> <!-- statistics -->
+                    <div class="stats">
+                        <h3>Handle:</h3>
+                        <p id="handle"></p>
+                    </div>
+
+                    <div class="stats">
+                        <h3>Role:</h3>
+                        <p id="role"></p>
+                    </div>
+
+                    <div class="stats">
+                        <h3>Stats:</h3>
+                        <ul id="stats">
+                        <li><strong>INT:</strong> <span></span></li>
+                        <li><strong>REF:</strong> <span></span></li>
+                        <li><strong>TECH:</strong> <span></span></li>
+                        <li><strong>COOL:</strong> <span></span></li>
+                        <li><strong>ATTR:</strong> <span></span></li>
+                        <li><strong>LUCK:</strong> <span></span></li>
+                        <li><strong>MA:</strong> <span></span></li>
+                        <li><strong>BODY:</strong> <span></span></li>
+                        <li><strong>EMP:</strong> <span></span></li>
+                        <li><strong>Run:</strong> <span></span></li>
+                        <li><strong>Leap:</strong> <span></span></li>
+                        <li><strong>Lift:</strong> <span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="stats">
+                        <h3>Skills:</h3>
+                        <p id="skills"></p>
+                    </div>
+
+                    <div class="stats">
+                        <h3>Cybernetics:</h3>
+                        <p id="cybernetics"></p>
+                    </div>
+                    </div>
+
+                    <div> <!-- lifepath -->
+                    <div class="lifepath">
+                        <h3>Style:</h3>
+                        <ul id="style">
+                        <li><strong>Clothes:</strong> <span></span></li>
+                        <li><strong>Hair:</strong> <span></span></li>
+                        <li><strong>Affectations:</strong> <span></span></li>
+                        <li><strong>Ethnicity:</strong> <span></span></li>
+                        <li><strong>Language:</strong> <span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="lifepath">
+                        <h3>Family Background:</h3>
+                        <p id="familyBackground"></p>
+                    </div>
+
+                    <div class="lifepath">
+                        <h3>Siblings:</h3>
+                        <ul id="siblings">
+                        <li><strong>Brothers:</strong> <span></span></li>
+                        <li><strong>Sisters:</strong> <span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="lifepath">
+                        <h3>Motivations:</h3>
+                        <ul id="motivations">
+                        <li><strong>Traits:</strong> <span></span></li>
+                        <li><strong>Valued Person:</strong> <span></span></li>
+                        <li><strong>Value Most:</strong> <span></span></li>
+                        <li><strong>Feelings about people:</strong> <span></span></li>
+                        <li><strong>Valued Possession:</strong> <span></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="lifepath">
+                        <h3>Life Events:</h3>
+                        <ul id="lifeEvents"></ul>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="weapons-gear">
+                    <div id="weapons">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>WA</th>
+                            <th>Conc.</th>
+                            <th>Avail.</th>
+                            <th>Dam.</th>
+                            <th>#shots</th>
+                            <th>ROF</th>
+                            <th>Rel</th>
+                        </tr>
+                        </thead>
+                        <tbody id="weaponsTable"></tbody>
+                    </table>
+                    </div>
+
+                    <div id="gear">
+                    <h3>Gear:</h3>
+                    <p id="gearList"></p>
+                    </div>
+                </div>
+                </div>
+
+                <footer>
+
+                    <p class="disclaimer">
+                        Cyberpunkdataterm is unofficial content provided under the Homebrew Content Policy of R. Talsorian Games and is not approved or endorsed by RTG. This content references materials that are the property of R. Talsorian Games and its licensees.
+                        <br />
+                        This is a fan-made project. It is not affiliated with or endorsed by R. Talsorian Games.
+                        All trademarks and copyrights are the property of their respective owners.
+                    </p>
+
+                    <a href="https://github.com/julian12161/cyberpunk-2020-info/issues" id="contact">Contact me</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

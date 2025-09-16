@@ -1,0 +1,452 @@
+{
+  "Isabella 'Bella' Moretti": {
+    "handle": "Bella",
+    "role": "Corporate (Biotechnica Team Leader)",
+    "stats": {
+      "INT": 10,
+      "REF": 9,
+      "TECH": 6,
+      "COOL": 8,
+      "ATTR": 8,
+      "LUCK": 7,
+      "MA": 5,
+      "BODY": 8,
+      "EMP": 4,
+      "Run": 15,
+      "Leap": 3,
+      "Lift": 320
+    },
+    "skills": "Combat sense 6, Leadership 8, Awareness 6, Athletics 4, brawling 4, handgun 5, melee 5, rifle 6, stealth 4",
+    "cybernetics": "enhanced reflexes (bioware +1), Kereznikov (+1 init)",
+    "style": {
+      "Clothes": "Executive chic, tailored corp suits",
+      "Hair": "Black, tied in a sleek bun",
+      "Affectations": "Augmented AR glasses",
+      "Ethnicity": "Italian-American",
+      "Language": "English, Italian"
+    },
+    "familyBackground": "Corporate technicians — Both parents are living. Family status is OK. Childhood environment spent in a decaying, once upscale neighborhood.",
+    "siblings": {
+      "Brothers": "1 twin brother (likes her)",
+      "Sisters": "None"
+    },
+    "motivations": {
+      "Traits": "Sneaky and Deceptive",
+      "Valued Person": "A Personal Hero",
+      "Value Most": "Honesty",
+      "Feelings about people": "I Hate almost everyone",
+      "Valued Possession": "-"
+    },
+    "lifeEvents": [
+      "17 - Nothing happened that year.",
+      "18 - Big Lose: Imprisonment: You have been in prison, or possibly held hostage (your choice) for 10 months. What are you going to do: Hunt down those responsible and make them pay!",
+      "19 - Made an Enemy: She's a partner or co-worker. Emnity started due to: Turned down other's offer of job or romantic involvement. They hate you. Next time you meet, reaction is: Go into murderous killing rage and rip her face off! Their backup is an entire Government Agency.",
+      "20 - Nothing happened that year.",
+      "21 - Romantic Involvement: Happy love affair.",
+      "22 - Romantic Involvement: Happy love affair.",
+      "23 - Nothing happened that year.",
+      "24 - Made a Friend: He's like a big brother to you.",
+      "25 - Romantic Involvement: Happy love affair.",
+      "26 - Made a Friend: He's like a kid brother to you.",
+      "27 - Made a Friend: She's an old enemy - Ex partner.",
+      "28 - Romantic Involvement: Fast Affairs and Hot Dates.",
+      "29 - Big Win: Find a Combat Teacher.",
+      "30 - Made a Friend: She's a relative - mother.",
+      "31 - Big Lose: Betrayal: You have been backstabbed in some manner. A secret was exposed. What are you going to do: Hunt down those responsible and make them pay!",
+      "32 - Made a Friend: He's a partner or co-worker.",
+      "33 - Romantic Involvement: Love affair with problems.",
+      "34 - Big Win: Local Nomad Pack befriends you: You can call upon them for one favor a month, equivalent to a Family Special Ability of +2.",
+      "35 - Big Lose: False accusation: You were set up. Accused of theft. What are you going to do: Save, if possible, anyone else involved in the situation.",
+      "36 - Big Lose: Accident: You were in some kind of terrible accident. You constantly relive nightmares (8 in 10 chance each night) of the accident and wake up screaming. What are you going to do: Clear your name.",
+      "37 - Big Win: Local Boostergang likes you: (Who knows why. These are Boosters, right?) You can call upon them for 1 favor a month, equivalent to a Family Special Ability of +2. But don't push it.",
+      "38 - Romantic Involvement: Tragic love affair. Lover went insane. You're friends.",
+      "39 - Made an Enemy: She's a Corporate Exec. Emnity started due to: Caused the other to lose face or status. They hate you. Next time you meet, reaction is: Rip into her verbally. Their backup is an entire Government Agency.",
+      "40 - Big Lose: Hunted by a Corporation: You have angered some corporate honcho. It's a small, local firm. What are you going to do: Save, if possible, anyone else involved in the situation.",
+      "41 - Made a Friend: She's like a kid sister to you."
+    ],
+    "weapons": [
+      {
+        "name": "Militech Arms Avenger",
+        "type": "Medium Pistol",
+        "wa": "0",
+        "conc": "Jacket",
+        "avail": "E",
+        "dam": "2d6+1",
+        "shots": "10",
+        "rof": "2",
+        "rel": "VR"
+      },
+      {
+        "name": "Combat Knife",
+        "type": "Melee",
+        "wa": "0",
+        "conc": "Pocket",
+        "avail": "E",
+        "dam": "1d6+1",
+        "shots": "-",
+        "rof": "-",
+        "rel": "-"
+      }
+    ],
+    "gear": "Biotechnica executive access badge, Encrypted datapad, Corporate comms unit, Personal vehicle access, spare clip, kevlar vest"
+  },
+  "Emily Williams": {
+    "handle": "",
+    "role": "Netrunner",
+    "stats": {
+      "INT": 9,
+      "REF": 5,
+      "TECH": 7,
+      "COOL": 3,
+      "ATTR": 6,
+      "LUCK": 7,
+      "MA": 7,
+      "BODY": 8,
+      "EMP": 6,
+      "Run": 21,
+      "Leap": 5,
+      "Lift": 320
+    },
+    "skills": "Interface 7, streetwise 5, persuasion 3, brawling 3, handgun 2, programming 5, stealth 4, cybertech 4",
+    "cybernetics": "Cyberkick (2d6*2)(thickened myomar, leap 9m, run jump 12m), skinweave, cybereyes (lowlight, thermal), Datajack",
+    "style": {
+      "Clothes": "Jumpsuits",
+      "Hair": "Tinted",
+      "Affectations": "Tattoos",
+      "Ethnicity": "Anglo-American",
+      "Language": "English"
+    },
+    "familyBackground": "Crime Lord Father.  Both parents are living. Family is imprisoned and you alone escaped. Childhood environment spent in a safe Corporate Suburbia.",
+    "siblings": {
+      "Brothers": "none",
+      "Sisters": "none"
+    },
+    "motivations": {
+      "Traits": "Moody, rash and headstrong",
+      "Valued Person": "Lover",
+      "Value Most": "Having a good time",
+      "Feelings about people": "I like almost everyone",
+      "Valued Possession": "-"
+    },
+    "lifeEvents": [
+      " 17 - Nothing happened that year.",
+      "18 - Made an Enemy: He's a person you worked for. Emnity started due to: Caused father to be imprisoned. You hate him. Next time you meet, reaction is: Avoid the scum. Their backup is a large corporation.",
+      "19 - Romantic Involvement: Happy love affair. Still Going.",
+      "20 - Made an Enemy: Mother. Emnity started due to: Accused the other of cowardice. You hate them. Next time you meet, reaction is: Rip into her verbally. Their backup is just themself.",
+      "21 - Big Win: Local Boostergang likes you: (Who knows why. These are Boosters, right?) You can call upon them for 1 favor a month, equivalent to a Family Special Ability of +2. But don't push it.",
+      "22 - Made an Enemy: He's a former business partner. Emnity started due to: Caused the business to fail. The feeling is mutual. Next time you meet, reaction is: Go into murderous killing rage and rip his face off! Their backup is themself and a few friends.",
+      "23 - Big Lose: Hunted by a Corporation: Your former business partner has landed a top job in a corp. It's a big, national corp with agents in major cities nationwide. What are you going to do: Save, if possible, anyone else involved in the situation.",
+      "24 - Big Win: Make a Friend on the Police Force (old informant of her father's): You may use him for inside information at a level of +2 Streetwise on any police related situation."
+    ],
+    "weapons": [
+      {
+        "name": "Federated Arms x-22",
+        "type": "Light Pistol",
+        "wa": "0",
+        "conc": "Pocket",
+        "avail": "E",
+        "dam": "1d6+1",
+        "shots": "10",
+        "rof": "2",
+        "rel": "ST"
+      },
+      {
+        "name": "Kick",
+        "type": "Brawling",
+        "wa": "0",
+        "conc": "-",
+        "avail": "-",
+        "dam": "2d6+1*2",
+        "shots": "-",
+        "rof": "-",
+        "rel": "-"
+      }
+    ],
+    "gear": ""
+  },
+  "Sarina Thiri": {
+    "handle": "",
+    "role": "Medtech",
+    "stats": {
+      "INT": 3,
+      "REF": 7,
+      "TECH": 8,
+      "COOL": 10,
+      "ATTR": 7,
+      "LUCK": 9,
+      "MA": 9,
+      "BODY": 6,
+      "EMP": 5,
+      "Run": 27,
+      "Leap": 6,
+      "Lift": 240
+    },
+    "skills": "MedTech 6, human perception 2, persuasion 3, brawling 4, diagnose illness 3, handgun 3, stealth 1, cybertech 4, first aid 4, pharma 2",
+    "cybernetics": "Skinweave, Sandevistan (+3 init)",
+    "style": {
+      "Clothes": "Normal",
+      "Hair": "Long, Ratty",
+      "Affectations": "Weird Contact lenses",
+      "Ethnicity": "Chinese/Southeast Asian",
+      "Language": "Burmese"
+    },
+    "familyBackground": "Corporate Managers.  Your parent(s) sold you for money. Your family is cursed with a hereditary feud that has lasted for generations. Childhood environment spent on a Corporate controlled Farm or Research Facility.",
+    "siblings": {
+      "Brothers": "1",
+      "Sisters": "3"
+    },
+    "motivations": {
+      "Traits": "Friendly and outgoing",
+      "Valued Person": "A parent",
+      "Value Most": "Having a good time",
+      "Feelings about people": "I hate almost everyone",
+      "Valued Possession": ""
+    },
+    "lifeEvents": [
+      "17 - Made a Friend: She's a partner or co-worker.",
+      "18 - Big Lose: Mental/physical incapacitation: You have experienced some type of mental or physical breakdown. It's some type of nervous disorder, probably from a bioplague - lose 1 pt REF. What are you going to do: Live it down and try to forget it.",
+      "19 - Nothing happened that year.",
+      "20 - Big Lose: Financial Loss/Debt: You have lost 500 eurodollars. If you can't pay this now, you have a debt to pay, in cash - or blood. What are you going to do: Live it down and try to forget it.",
+      "21 - Big Win: Find a Combat Teacher.",
+      "22 - Big Win: Powerful Corporate Exec owes you one favor.",
+      "23 - Big Lose: Imprisonment: You have been in prison, or possibly held hostage (your choice) for 4 months. What are you going to do: Save, if possible, anyone else involved in the situation.",
+      "24 - Romantic Involvement: Fast Affairs and Hot Dates.",
+      "25 - Big Win: Find a Teacher: Add +1 to any INT based skill, or begin a new INT based skill at +2."
+    ],
+    "weapons": [
+      {
+        "name": "BudgetArms Auto 3",
+        "type": "Heavy Pistol",
+        "wa": "-1",
+        "conc": "Jacket",
+        "avail": "C",
+        "dam": "3d6",
+        "shots": "8",
+        "rof": "2",
+        "rel": "UR"
+      }
+    ],
+    "gear": "Spare clip,"
+  },
+    "Carlos Rodriguez": {
+    "handle": "",
+    "role": "Solo",
+    "stats": {
+      "INT": 8,
+      "REF": 8,
+      "TECH": 5,
+      "COOL": 8,
+      "ATTR": 7,
+      "LUCK": 7,
+      "MA": 7,
+      "BODY": 7,
+      "EMP": 6,
+      "Run": 21,
+      "Leap": 5,
+      "Lift": 280
+    },
+    "skills": "Combat sense 4, streetwise 6, awareness 7, athletics 6, brawling 7, driving 5, handgun 8, melee 7, stealth 6, survival 5",
+    "cybernetics": "Cybernetic eye (Teleoptics, Anti-Dazzle, Infrared, Thermograph sensor), Reinforced Cybernetic Arms (Hydrolic rams 3x Damage), Subdermal armor, Cowl",
+    "style": {
+      "Clothes": "Cammos",
+      "Hair": "Long, Straight",
+      "Affectations": "Ritual Scars",
+      "Ethnicity": "Hispanic-American",
+      "Language": "English"
+    },
+    "familyBackground": "Pirate Fleet. Your parent(s) gave you up for adoption. Family status is OK. Childhood environment spent in a Nomad Pack moving from town to town.",
+    "siblings": {
+      "Brothers": "0",
+      "Sisters": "0"
+    },
+    "motivations": {
+      "Traits": "Moody, rash and headstrong",
+      "Valued Person": "A Pet",
+      "Value Most": "Money",
+      "Feelings about people": "Every person is a valuable individual",
+      "Valued Possession": ""
+    },
+    "lifeEvents": [
+      "17 - Big Win: Make a Powerful Connection in City Government: It's in the Police Dept.",
+      "18 - Made a Friend: She's an old lover in the police Dpmt.",
+      "19 - Romantic Involvement: Happy love affair.",
+      "20 - Nothing happened that year.",
+      "21 - Made a Friend: She's like a big sister to you.",
+      "22 - Made an Enemy: He's a Government Official. Emnity started due to: Was a romantic rival. The feeling is mutual. Next time you meet, reaction is: Go into murderous killing rage and rip his face off! Their backup is just themself.",
+      "23 - Nothing happened that year.",
+      "24 - Made an Enemy: He's a Government Official. Emnity started due to: Caused a physical disablity (lose eye) You hate them. Next time you meet, reaction is: Go into murderous killing rage and rip his face off! Their backup is just themself.",
+      "25 - Romantic Involvement: Fast Affairs and Hot Dates.",
+      "26 - Nothing happened that year.",
+      "27 - Big Win: Find a Combat Teacher.",
+      "28 - Made an Enemy: Mother. Emnity started due to: You just didn't like each other. The feeling is mutual. Next time you meet, reaction is: Avoid the scum. Their backup is a large corporation.",
+      "29 - Romantic Involvement: Tragic love affair. A personal goal or vendetta came between you. They like you, you hate them.",
+      "30 - Romantic Involvement: Love affair with problems."
+    ],
+    "weapons": [
+      {
+        "name": "H&K MP-2013",
+        "type": "Light SMG",
+        "wa": "+1",
+        "conc": "Jacket",
+        "avail": "C",
+        "dam": "2d6+3",
+        "shots": "35",
+        "rof": "32",
+        "rel": "ST"
+      },
+      {
+        "name": "Militech Arms Avenger",
+        "type": "Medium Pistol",
+        "wa": "0",
+        "conc": "Jacket",
+        "avail": "E",
+        "dam": "2d6+1",
+        "shots": "10",
+        "rof": "2",
+        "rel": "VR"
+      },
+      {
+        "name": "Combat Knife",
+        "type": "Melee",
+        "wa": "0",
+        "conc": "Pocket",
+        "avail": "E",
+        "dam": "1d6+1*3",
+        "shots": "-",
+        "rof": "-",
+        "rel": "-"
+      }
+    ],
+    "gear": "Kevlar vest, spare clip"
+  },
+    "Yuki Nakamura": {
+    "handle": "",
+    "role": "Biotechnica Spy",
+    "stats": {
+      "INT": 9,
+      "REF": 9,
+      "TECH": 5,
+      "COOL": 6,
+      "ATTR": 8,
+      "LUCK": 5,
+      "MA": 5,
+      "BODY": 9,
+      "EMP": 4,
+      "Run": 15,
+      "Leap": 3,
+      "Lift": 360
+    },
+    "skills": "grooming 4, style 4, human perception 4, seduction 5, persuasion 5, awareness 4, dance 3, hide 3, Karate 2, stealth 4, disguise 4",
+    "cybernetics": "Romanova Cyberlegs (High Heeled, +1 Wardrobe and style, +5 SDP Steel joints, Chromed, Hidden holster, digital recorder) ((2d6+3)*2)",
+    "style": {
+      "Clothes": "Tight Dresses",
+      "Hair": "Long, Straight",
+      "Affectations": "Tattoos",
+      "Ethnicity": "Japanese",
+      "Language": "Japanese"
+    },
+    "familyBackground": "Corporate Technician. Both parents are living. Family status is OK. Childhood environment spent in the heart of the Combat zone",
+    "siblings": {
+      "Brothers": "2",
+      "Sisters": "3"
+    },
+    "motivations": {
+      "Traits": "Intellectual and detached",
+      "Valued Person": "No-one",
+      "Value Most": "Honour",
+      "Feelings about people": "People are tools. Use them for your own goals and discard them",
+      "Valued Possession": ""
+    },
+    "lifeEvents": [
+      "17 - Big Lose: Imprisonment: You have been in prison for 7 months. What are you going to do: Clear your name.",
+      "18 - Big Lose: Illness/addiction: You have developed a drug habit in this time. Lost 1 pt of REF permanently as a result. What are you going to do: Get what's rightfully yours.",
+      "19 - Nothing happened that year.",
+      "20 - Made an Enemy: He's a Booster gang member. Emnity started due to: Cause a major humiliation You hate them. Next time you meet, reaction is: Rip into him verbally. Their backup is just themself.",
+      "21 - Romantic Involvement: Happy love affair.",
+      "22 - Nothing happened that year.",
+      "23 - Big Lose: Accident: You were in some kind of terrible accident. You constantly relive nightmares (8 in 10 chance each night) of the accident and wake up screaming. What are you going to do: Get what's rightfully yours.",
+      "24 - Big Lose: False accusation: You were set up. Accused of theft. What are you going to do: Finish the job."
+    ],
+    "weapons": [
+      {
+        "name": "BudgetArms C-13",
+        "type": "Light Pistol",
+        "wa": "-1",
+        "conc": "Pocket",
+        "avail": "E",
+        "dam": "1d6",
+        "shots": "8",
+        "rof": "2",
+        "rel": "ST"
+      },
+      {
+        "name": "Kick",
+        "type": "Karate",
+        "wa": "-",
+        "conc": "-",
+        "avail": "-",
+        "dam": "(2d6+3)*2",
+        "shots": "-",
+        "rof": "-",
+        "rel": "-"
+      }
+    ],
+    "gear": "Tight Black Dress with armoured enhancements"
+  },
+    "npc-name": {
+    "handle": "",
+    "role": "",
+    "stats": {
+      "INT": 1,
+      "REF": 1,
+      "TECH": 1,
+      "COOL": 1,
+      "ATTR": 1,
+      "LUCK": 1,
+      "MA": 1,
+      "BODY": 1,
+      "EMP": 1,
+      "Run": 3,
+      "Leap": 0.75,
+      "Lift": 40
+    },
+    "skills": "",
+    "cybernetics": "",
+    "style": {
+      "Clothes": "",
+      "Hair": "",
+      "Affectations": "",
+      "Ethnicity": "",
+      "Language": ""
+    },
+    "familyBackground": "",
+    "siblings": {
+      "Brothers": "",
+      "Sisters": ""
+    },
+    "motivations": {
+      "Traits": "",
+      "Valued Person": "",
+      "Value Most": "",
+      "Feelings about people": "",
+      "Valued Possession": ""
+    },
+    "lifeEvents": [
+      ""
+    ],
+    "weapons": [
+      {
+        "name": "",
+        "type": "",
+        "wa": "",
+        "conc": "",
+        "avail": "",
+        "dam": "",
+        "shots": "",
+        "rof": "",
+        "rel": ""
+      }
+    ],
+    "gear": ""
+  }
+}
