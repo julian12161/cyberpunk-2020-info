@@ -136,10 +136,16 @@ function applyDamage(button) {
     const sp = parseInt(spField.value) || 0;
 
     let effectiveDmg = dmg - sp + btm;
+
     if (dmg > sp && effectiveDmg <= 0) {
-      effectiveDmg = 1; // BTM reduced damage to 0 or less, but it penetrated armor
+        effectiveDmg = 1; // penetrated but reduced to <= 0
     } else {
-      effectiveDmg = Math.max(0, effectiveDmg);
+        effectiveDmg = Math.max(0, effectiveDmg);
+    }
+
+    // ✅ Double penetrating damage to the head
+    if (location === "head" && dmg > sp && effectiveDmg > 0) {
+        effectiveDmg *= 2;
     }
 
     // Update SP if it absorbed some
