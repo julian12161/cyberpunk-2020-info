@@ -98,7 +98,7 @@ button:hover {
     background-color: black;
 }
 
-.weapon select, .hit-loc {
+.weapon select, .hit-loc, .role {
     font-family: monospace;
     color: white;
     background-color: #222;
@@ -121,6 +121,9 @@ button:hover {
 }
 
 #npcAdd {
+    display: flex;
+    width: 100%;
+    gap: 0;
     position: sticky;
     top: 26px;
     z-index: 2;

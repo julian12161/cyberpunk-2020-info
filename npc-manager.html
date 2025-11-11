@@ -17,6 +17,22 @@
             <div class="npc-card">
                 <h3 contenteditable="true" tabindex="0">Unnamed NPC</h3>
 
+                <label for="role">Role:</label>
+                <select class="role" name="role">
+                    <option value="solo">Solo</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="media">Media</option>
+                    <option value="nomad">Nomad</option>
+                    <option value="techie">Techie</option>
+                    <option value="cop">Cop</option>
+                    <option value="rockerboy">Rockerboy</option>
+                    <option value="medtech">Med Techie</option>
+                    <option value="fixer">Fixer</option>
+                    <option value="netrunner">Netrunner</option>
+                </select>
+
+                <p class="role-skill-display" contenteditable="true"></p>
+
                 <div class="stats">
                     <label for="int">Int</label>
 
@@ -248,7 +264,12 @@
                     <button onclick="document.getElementById('loadGroupInput').click()">Load Group</button>
                 </div>
 
-                <button onclick="addNPC()" id="npcAdd">Add Agent</button>
+                <div id="npcAdd">
+                <button onclick="addNPC()">Add Blank NPC</button>
+                <button onclick="createRandomNPC('basic')">+ Basic</button>
+                <button onclick="createRandomNPC('tough')">+ Tough</button>
+                <button onclick="createRandomNPC('veteran')">+ Veteran</button>
+                </div>
 
                 <div id="content">
 

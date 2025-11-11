@@ -1,0 +1,64 @@
+{
+    "Fashion": [
+        "Generic Chic",
+        "Leisurewear",
+        "Businesswear",
+        "High Fashion",
+        "Urban Flash"
+    ],
+    "Tools": [
+        "Cutting Torch",
+        "Tech Toolkit",
+        "B&E Tools",
+        "Electronics Toolkit",
+        "Protective Goggles",
+        "Flashtube",
+        "Glowstik",
+        "Flash Paint",
+        "Flash Tape",
+        "Rope",
+        "Breathing Mask"
+    ],
+    "PersonalElectronics": [
+        "Data Chip",
+        "LogCompass",
+        "Digital Recorder",
+        "Digital Camera",
+        "Video/Audio Tape Player",
+        "Videotape",
+        "Pocket TV",
+        "Digital Chip Player",
+        "Digital Music Chip"
+    ],
+    "DataSystems": [
+        "Interface Cables",
+        "Low Impedance Cables",
+        "Trode Set"
+    ],
+    "Communications": [
+        "Mastoid Commo",
+        "Pocket Commo",
+        "Cell Phone",
+        "Mini Cell Phone"
+    ],
+    "Surveillance/Security": [
+        "Binoculars",
+        "IR Flash",
+        "PlasKuffs",
+        "Stripwire Binders"
+    ],
+    "Medical": [
+        "Spray Skin",
+        "Medkit",
+        "First Aid Kit",
+        "Drug Analyser",
+        "Airhypo"
+    ],
+    "Furnishings": [
+        "Sleeping Bag",
+        "Inflatable Bed"
+    ],
+    "Lifestyle": [
+        "TraumaTeam Card"
+    ]
+}

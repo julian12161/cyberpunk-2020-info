@@ -1,0 +1,171 @@
+{
+  "Fashionware": [
+    "Biomonitor",
+    "Skinwatch",
+    "Light Tattoo",
+    "Shift-tacts",
+    "ChemSkins",
+    "Synthskins",
+    "Techhair"
+  ],
+  "Neuralware": [
+    "Kerenzikov Booster",
+    "Speedware (Sandevistan)",
+    "Tactile Boost",
+    "Olfactory Boost",
+    "Pain Editor",
+    "Cybermodem Link",
+    "Vehicle Link",
+    "Smartgun Link",
+    "Machine/Tech Link",
+    "DataTerm Link",
+    "Interface Plug",
+    "Reflex Chips",
+    "Memory Chips",
+    "Chipware Socket"
+  ],
+  "Implants": [
+    "Nasal Filters",
+    "Gills",
+    "Independent Air Supply",
+    "Mr Studd&#8482 Sexual Implant",
+    "Contraceptive Implant",
+    "Subdermal Pocket",
+    "Adrenal Booster",
+    "Subdermal Armour",
+    "Motion Detector",
+    "Digital Recorder",
+    "Audio/Video Tape Recorder",
+    "Radar Sensor",
+    "Sonar Implant",
+    "Radiation Detector",
+    "Chemical Analyser",
+    "Voice Synthesiser",
+    "AudioVox"
+  ],
+  "Bioware": [
+      "Grafted Muscle",
+      "Muscle and Bone Lace",
+      "SkinWeave",
+      "Enhanced Antibodies",
+      "Toxin Binders",
+      "Nanosurgeons"
+    ],
+  "Cyberweapons": [
+      "Scratchers",
+      "Implanted Fangs(Vampires)",
+      "Rippers",
+      "Wolvers",
+      "Big Knocks",
+      "Slice N' Dice",
+      "Cybersnake"
+    ],
+  "Cyberoptic": [
+    "Color Shift",
+    "Image Enhancement",
+    "Targeting Scope",
+    "Times Square Marquee",
+    "TeleOptics",
+    "Micro-optics",
+    "AntiDazzle",
+    "LowLite&#8482",
+    "Thermograph Sensor",
+    "Infrared",
+    "Ultraviolet",
+    "Microvideo Optic",
+    "DigitalCamera",
+    "Dartgun"
+  ],
+  "Cyberaudio": [
+    "Amplified Hearing",
+    "Radio Link",
+    "Phone Splice",
+    "Scrambler",
+    "Bug Detector",
+    "Voice Stress Analyser",
+    "Sound Editing",
+    "Enhanced Hearing Range",
+    "Wearman&#8482",
+    "Radar Detector",
+    "Homing Tracer",
+    "Tight Beam Radio Link",
+    "Wide Band Radio Scanner",
+    "Micro-Recorder Link",
+    "Digital Recording Link",
+    "Level Damper"
+  ],
+  "Cyberarm": [
+    "Standard",
+    "Quick Change Mount",
+    "Hydraulic Rams(SDP 30, 3x dam)",
+    "Thickened Myomar(SDP 25, 2x dam)",
+    "Reinforced Joints(+5 SDP)",
+    "Artificial Shoulder Mount",
+    "Microwave/EMP Shielding",
+    "Plastic Covering",
+    "Realskinn&#8482",
+    "SuperChrome&#8482",
+    "Armour(SP 20)"
+  ],
+  "Cyberhand": [
+    "Ripper Hand(1d6+3 AP)",
+    "Hammer Hand(1d10)",
+    "Buzz Hand(2d6+2)",
+    "Tool Hand",
+    "Grapple Hand",
+    "Extension Hand",
+    "Spike Hand(1d6+3 AP)",
+    "Modular Hand"
+  ],
+  "Cyberleg": [
+    "Standard",
+    "Quick Change Mount",
+    "Hydraulic Rams(SDP 30, 3x dam)",
+    "Thickened Myomar(SDP 25, 2x dam)",
+    "Reinforced Joints(+5 SDP)",
+    "Artificial Shoulder Mount",
+    "Microwave/EMP Shielding",
+    "Plastic Covering",
+    "Realskinn&#8482",
+    "SuperChrome&#8482",
+    "Armour(SP 20)"
+  ],
+  "Cyberfoot": [
+    "Talon Foot(1d6 AP)",
+    "Tool Foot",
+    "Web Foot(x2 swim speed)",
+    "Grip Foot(+2 climb)",
+    "Spike Heel Foot(2d6 AP)"
+  ],
+  "Built-ins": [
+    "AV-Tape Recorder",
+    "Cybermodem",
+    "Digital Recorder",
+    "Storage Space",
+    "MiniCam",
+    "MiniVid",
+    "Hidden Holster",
+    "LCD Screen Readout",
+    "Techscanner"
+  ],
+  "Built-in-weapons": [
+    "Grenade Launcher",
+    "Micro-Missile Launcher(4 missiles - 4d6)",
+    "Popup gun",
+    "Flame Thrower(2d6, then 1d6/2 after 2 turns",
+    "Weapon Mount & Link",
+    "2 shot Capacitor Laser(3d6)"
+  ],
+  "LinearFrame": [
+    "Frame &Sigma(str = 12)",
+    "Frame &Beta(str = 14)",
+    "Frame &Omega(str = 16"
+  ],
+  "BodyPlating": [
+    "Cowl(Head SP25)",
+    "Faceplate(Face SP25)",
+    "Torso Plate(Torso SP25)",
+    "Front Optic Mount",
+    "Sense ext. ('Rabbit Ears')"
+  ]
+}
