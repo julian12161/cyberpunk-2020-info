@@ -111,6 +111,58 @@ function populateAllWeaponSelects() {
   });
 }
 
+function generateName() {
+  const pools = {
+    western: {
+      firstStart: ["Al", "Ben", "Car", "Dan", "El", "Fran", "Jen", "Mar", "Rob", "Sam", "Tom", "Wil", "Ash", "Kat", "Luc"],
+      firstEnd: ["a", "an", "ie", "en", "on", "ar", "y", "o", "e", "us"],
+      lastStart: ["Smith", "Brown", "Miller", "Wilson", "Carter", "Cooper", "Turner", "Hunter", "Mason", "Walker"],
+      lastEnd: ["", "", "", "", "son", "er", "man"] // subtle variation
+    },
+    japanese: {
+      firstStart: ["Aki", "Hiro", "Kazu", "Masa", "Nao", "Rin", "Sato", "Taka", "Yuki", "Ren", "Aya", "Kiyo"],
+      firstEnd: ["", "ko", "shi", "ta", "mi", "ka", "ru"],
+      lastStart: ["Tan", "Nak", "Suz", "Mor", "Fuj", "Kob", "Tak", "Yam", "Ino", "Kaw"],
+      lastEnd: ["aka", "ashi", "ura", "yama", "moto", "zawa", "uchi", "da"]
+    },
+    latino: {
+      firstStart: ["Ale", "Car", "Die", "Fer", "Isa", "Jav", "Lor", "Mig", "Nico", "Rafa", "San", "Tomi"],
+      firstEnd: ["o", "a", "e", "i"],
+      lastStart: ["Gar", "Rod", "Fern", "Gon", "Ram", "Tor", "Dia", "Men", "Var"],
+      lastEnd: ["ez", "es", "o", "as", "ia", "ado"]
+    },
+    russian: {
+      firstStart: ["Ale", "Mik", "Iv", "Nat", "Ser", "Vik", "Yel", "Tat", "Kir", "And"],
+      firstEnd: ["a", "o", "i", "ei", "ya", "an", "y"],
+      lastStart: ["Petro", "Ivan", "Volk", "Moroz", "Dimitr", "Kuzn", "Baran", "Nov"],
+      lastEnd: ["ov", "ev", "in", "ski", "ovitch"]
+    },
+    street: {
+      firstStart: ["Zero", "Jinx", "Echo", "Razor", "Crash", "Moth", "Pulse", "Nova", "Chrome", "Wisp", "Grin", "Ash", "Lock"],
+      firstEnd: [""],
+      lastStart: ["", "", "", "", "X", "9", "99", "13", "One", "Chrome", "Ghost"],
+      lastEnd: [""]
+    }
+  };
+
+  const types = Object.keys(pools);
+  const type = types[Math.floor(Math.random() * types.length)];
+  const p = pools[type];
+
+  const first =
+    p.firstStart[Math.floor(Math.random() * p.firstStart.length)] +
+    p.firstEnd[Math.floor(Math.random() * p.firstEnd.length)];
+
+  const last =
+    p.lastStart[Math.floor(Math.random() * p.lastStart.length)] +
+    p.lastEnd[Math.floor(Math.random() * p.lastEnd.length)];
+
+  // 20% chance of using just one name for style
+  if (Math.random() < 0.2) return first;
+
+  return `${first} ${last}`;
+}
+
 function calculateBTM(body) {
   if (body >= 11) return -5;
   if (body === 10) return -4;
@@ -572,7 +624,7 @@ function generateRandomNPC(difficulty, roleName) {
     const roleKey = roleName || Object.keys(roles).find(r => roles[r] === role);
 
     const npc = {
-        name: `${difficulty.toUpperCase()} NPC`,
+        name: `${generateName()} (${difficulty.toUpperCase()})`,
         role: roleKey,
         int: rand(...range),
         ref: rand(...range),
