@@ -454,6 +454,74 @@ function loadGroup(npcGroup) {
     });
 }
 
+// === AUTO SAVE / AUTO RESTORE ===
+
+// Save current NPCs to localStorage whenever they change
+function autoSaveNPCs() {
+  const npcCards = document.querySelectorAll('.npc-card');
+  const npcData = [];
+
+  npcCards.forEach(card => {
+    const data = {
+      name: card.querySelector('h3').textContent,
+      role: card.querySelector('.role').value,
+      roleSkill: card.querySelector('.role-skill-display').textContent,
+      int: card.querySelector('.int').value,
+      ref: card.querySelector('.ref').value,
+      tech: card.querySelector('.tech').value,
+      cool: card.querySelector('.cool').value,
+      attr: card.querySelector('.attr').value,
+      luck: card.querySelector('.luck').value,
+      ma: card.querySelector('.ma').value,
+      body: card.querySelector('.body').value,
+      emp: card.querySelector('.emp').value,
+      save: card.querySelector('.save').value,
+      btm: card.querySelector('.btm').value,
+      hp: card.querySelector('.hp-current').value,
+      ammo: card.querySelector('.ammo').value,
+      skills: card.querySelector('.skill-list').value,
+      cyberware: card.querySelector('.cyberware-list').value,
+      equipment: card.querySelector('.equipment-list').value,
+      lifepath: card.querySelector('.lifepath-list').value,
+      sp: {
+        head: card.querySelector('[name="sp-head"]').value,
+        torso: card.querySelector('[name="sp-torso"]').value,
+        rarm: card.querySelector('[name="sp-rarm"]').value,
+        larm: card.querySelector('[name="sp-larm"]').value,
+        rleg: card.querySelector('[name="sp-rleg"]').value,
+        lleg: card.querySelector('[name="sp-lleg"]').value
+      }
+    };
+    npcData.push(data);
+  });
+
+  localStorage.setItem("npcGroupAutoSave", JSON.stringify(npcData));
+}
+
+// Auto-save every 30 seconds
+setInterval(autoSaveNPCs, 30000);
+
+// Also save when leaving page
+window.addEventListener("beforeunload", autoSaveNPCs);
+
+// Auto-load from localStorage on startup
+window.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("npcGroupAutoSave");
+  if (saved) {
+    const npcGroup = JSON.parse(saved);
+    if (npcGroup.length > 0) {
+      loadGroup(npcGroup);
+    }
+  }
+});
+
+function deleteAllNPCs() {
+  if (confirm("Delete all NPCs? This cannot be undone.")) {
+    document.getElementById("content").innerHTML = "";
+    localStorage.removeItem("npcGroupAutoSave");
+  }
+}
+
 function getRandomCyberware(difficulty) {
   if (!cyberwareData || Object.keys(cyberwareData).length === 0) return "";
 
