@@ -1,6 +1,6 @@
 {
   "Fashionware": [
-    "Biomonitor",
+    "Biomonitor (+2 resist torture/drugs",
     "Skinwatch",
     "Light Tattoo",
     "Shift-tacts",
@@ -9,10 +9,10 @@
     "Techhair"
   ],
   "Neuralware": [
-    "Kerenzikov Booster",
-    "Speedware (Sandevistan)",
-    "Tactile Boost",
-    "Olfactory Boost",
+    "Kerenzikov Booster (+1-3 initiative)",
+    "Speedware (Sandevistan) (+3 initiative/5 rounds)",
+    "Tactile Boost (+2 touch awareness)",
+    "Olfactory Boost (+2 smell awareness, scent tracking)",
     "Pain Editor",
     "Cybermodem Link",
     "Vehicle Link",
@@ -25,50 +25,50 @@
     "Chipware Socket"
   ],
   "Implants": [
-    "Nasal Filters",
-    "Gills",
-    "Independent Air Supply",
-    "Mr Studd&#8482 Sexual Implant",
-    "Contraceptive Implant",
+    "Nasal Filters (70% effective)",
+    "Gills (4 hour water breathing)",
+    "Independent Air Supply (25 mins)",
+    "Mr Studd\u2122 Sexual Implant",
+    "Contraceptive Implant (98% effective)",
     "Subdermal Pocket",
-    "Adrenal Booster",
-    "Subdermal Armour",
-    "Motion Detector",
+    "Adrenal Booster (+1 REF for 1d6+2 rounds)",
+    "Subdermal Armour (torso SP 18)",
+    "Motion Detector (20sq/m 70% effective)",
     "Digital Recorder",
     "Audio/Video Tape Recorder",
-    "Radar Sensor",
-    "Sonar Implant",
-    "Radiation Detector",
-    "Chemical Analyser",
-    "Voice Synthesiser",
-    "AudioVox"
+    "Radar Sensor (100m range radar, 70% effective)",
+    "Sonar Implant (50m range sonar, 70% effective)",
+    "Radiation Detector (10m range, 80% effective)",
+    "Chemical Analyser (5m range, 70% effective)",
+    "Voice Synthesiser (mimic sounds (60% effective)",
+    "AudioVox (+2 performance)"
   ],
   "Bioware": [
-      "Grafted Muscle",
-      "Muscle and Bone Lace",
-      "SkinWeave",
-      "Enhanced Antibodies",
-      "Toxin Binders",
-      "Nanosurgeons"
+      "Grafted Muscle (+1/+2 body)",
+      "Muscle and Bone Lace (+2 body)",
+      "SkinWeave (SP 12)",
+      "Enhanced Antibodies (+1 healing)",
+      "Toxin Binders (save +4 vs drugs/poison)",
+      "Nanosurgeons (x2 healing)"
     ],
   "Cyberweapons": [
-      "Scratchers",
-      "Implanted Fangs(Vampires)",
-      "Rippers",
-      "Wolvers",
-      "Big Knocks",
-      "Slice N' Dice",
-      "Cybersnake"
+      "Scratchers (1d6/2)",
+      "Implanted Fangs(Vampires) (1d6/3)",
+      "Rippers (1d6+3 AP)",
+      "Wolvers (3d6 AP)",
+      "Big Knocks (1d6+2)",
+      "Slice N' Dice (2d6)",
+      "Cybersnake (1d6)"
     ],
   "Cyberoptic": [
     "Color Shift",
-    "Image Enhancement",
-    "Targeting Scope",
+    "Image Enhancement (+2 awareness)",
+    "Targeting Scope (+1 Smartgun)",
     "Times Square Marquee",
-    "TeleOptics",
-    "Micro-optics",
+    "TeleOptics (20x)",
+    "Micro-optics (microscope)",
     "AntiDazzle",
-    "LowLite&#8482",
+    "LowLite\u2122",
     "Thermograph Sensor",
     "Infrared",
     "Ultraviolet",
@@ -77,17 +77,17 @@
     "Dartgun"
   ],
   "Cyberaudio": [
-    "Amplified Hearing",
-    "Radio Link",
+    "Amplified Hearing (+1 awareness sound)",
+    "Radio Link (1 mile)",
     "Phone Splice",
     "Scrambler",
-    "Bug Detector",
-    "Voice Stress Analyser",
-    "Sound Editing",
-    "Enhanced Hearing Range",
-    "Wearman&#8482",
-    "Radar Detector",
-    "Homing Tracer",
+    "Bug Detector (3m, 60% effective)",
+    "Voice Stress Analyser (+2 human perception)",
+    "Sound Editing (+2 awareness specific convo)",
+    "Enhanced Hearing Range (supersonic, subsonic)",
+    "Wearman\u2122 (music system)",
+    "Radar Detector (40% find source)",
+    "Homing Tracer (follow tracer up to 1km)",
     "Tight Beam Radio Link",
     "Wide Band Radio Scanner",
     "Micro-Recorder Link",
@@ -103,8 +103,8 @@
     "Artificial Shoulder Mount",
     "Microwave/EMP Shielding",
     "Plastic Covering",
-    "Realskinn&#8482",
-    "SuperChrome&#8482",
+    "Realskinn\u2122",
+    "SuperChrome\u00AE",
     "Armour(SP 20)"
   ],
   "Cyberhand": [
@@ -112,8 +112,8 @@
     "Hammer Hand(1d10)",
     "Buzz Hand(2d6+2)",
     "Tool Hand",
-    "Grapple Hand",
-    "Extension Hand",
+    "Grapple Hand (100' line)",
+    "Extension Hand (1m)",
     "Spike Hand(1d6+3 AP)",
     "Modular Hand"
   ],
@@ -126,8 +126,8 @@
     "Artificial Shoulder Mount",
     "Microwave/EMP Shielding",
     "Plastic Covering",
-    "Realskinn&#8482",
-    "SuperChrome&#8482",
+    "Realskinn\u2122",
+    "SuperChrome\u00AE",
     "Armour(SP 20)"
   ],
   "Cyberfoot": [
@@ -157,9 +157,9 @@
     "2 shot Capacitor Laser(3d6)"
   ],
   "LinearFrame": [
-    "Frame &Sigma(str = 12)",
-    "Frame &Beta(str = 14)",
-    "Frame &Omega(str = 16"
+    "Frame \u03A3 (str = 12)",
+    "Frame \u0392 (str = 14)",
+    "Frame \u03A9 (str = 16"
   ],
   "BodyPlating": [
     "Cowl(Head SP25)",
