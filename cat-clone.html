@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clone Cat — Behaviour & Bonding Reference</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc;--accent-2:#60a5fa;--glass:rgba(255,255,255,0.03);--paper:#0b1220}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef6;background:linear-gradient(180deg,#051023 0%, #071428 60%);}
+    .wrap{max-width:980px;margin:28px auto;padding:24px;}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#02203b;font-weight:700;font-size:20px;box-shadow:0 6px 20px rgba(6,18,33,0.6)}
+    h1{margin:0;font-size:20px}
+    .subtitle{color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .controls{order:-1}}
+
+    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 8px 30px rgba(3,6,12,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card h2{margin:0 0 8px 0;font-size:15px}
+    .muted{color:var(--muted);font-size:13px}
+
+    .tables{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:1000px){.tables{grid-template-columns:1fr}}
+
+    table{width:100%;border-collapse:collapse;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-radius:8px;overflow:hidden}
+    th,td{padding:8px 10px;text-align:left;font-size:13px;border-bottom:1px dashed rgba(255,255,255,0.03)}
+    th{background:rgba(255,255,255,0.02);font-weight:600}
+    td.code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;background:rgba(255,255,255,0.015);border-radius:6px}
+
+    .controls .row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    input[type=number]{width:80px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    button{background:linear-gradient(180deg,var(--accent),var(--accent-2));border:none;padding:8px 12px;border-radius:8px;color:#01263a;font-weight:700;cursor:pointer}
+    button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--accent);font-weight:600}
+    .result{margin-top:10px;padding:10px;border-radius:8px;background:var(--glass);font-size:14px}
+
+    details{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px}
+    summary{cursor:pointer}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media print{body{background:white;color:black} .wrap{max-width:100%;padding:0} .controls, button{display:none} .card{box-shadow:none;border:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">CC</div>
+      <div>
+        <h1>Clone Cat — Behaviour & Bonding</h1>
+        <div class="subtitle">DM reference / player-facing handout — d20 behaviour tables + bonding mechanic</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2>Mechanic Summary</h2>
+          <p class="muted">Use this sheet to run K-DOC's vat-grown cat. Bonding is tracked as <strong>Friendship Level</strong>. Weekly Zoology checks increase it. Daily checks decide whether the cat behaves unnaturally or naturally.</p>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <div class="code-block" style="background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;font-family:ui-monospace,monospace">Weekly Bond: <strong>Zoology DV 15</strong><br>Success: +1 Friendship</div>
+            <div class="code-block" style="background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;font-family:ui-monospace,monospace">Daily Roll: <strong>1d10 + Friendship</strong><br>Result ≥ 15 = Natural table</div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:14px 0">
+
+          <div class="tables">
+            <div>
+              <h3 style="margin:6px 0">Unnatural Behaviour (d20)</h3>
+              <table>
+                <thead><tr><th>d20</th><th>Behaviour</th></tr></thead>
+                <tbody id="unnatural-table">
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <h3 style="margin:6px 0">Natural Behaviour (d20)</h3>
+              <table>
+                <thead><tr><th>d20</th><th>Behaviour</th></tr></thead>
+                <tbody id="natural-table">
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <details style="margin-top:12px"><summary><strong>Friendship progression (flavour)</strong></summary>
+            <p class="muted">0–1: Blank slate. 2–3: Recognises feeding routine. 4–5: Follows sometimes. 6–7: Allows petting. 8–9: Normal with K-DOC. 10+: Fully bonded.</p>
+          </details>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h2>Usage & GM Notes</h2>
+          <p class="muted">Roll the daily check whenever the cat interacts with people, tech, or in a scene moment. If you need an instant mood check, roll a d20 on the current table (natural or unnatural). Optional: even on a natural result, add a small "vat quirk" (barcode under fur, momentary stillness, faint lab smell) now and then.</p>
+
+          <details style="margin-top:8px"><summary><strong>Sample prompts</strong></summary>
+            <ul class="muted">
+              <li>"The cat stares at the holoscreen—roll behaviour."</li>
+              <li>"K-DOC spends an hour coaxing the cat—do the weekly bond check."</li>
+            </ul>
+          </details>
+        </section>
+      </main>
+
+      <aside class="controls card">
+        <h2>Dice & Bonding Tools</h2>
+
+        <div class="row">
+          <label class="muted" style="width:120px">Friendship Level</label>
+          <input id="friendship" type="number" value="0" min="0" max="20" />
+        </div>
+
+        <div class="row">
+          <button id="dailyRoll">Roll Daily (1d10 + Friendship)</button>
+          <button class="ghost" id="forceUnnatural">Force Unnatural d20</button>
+        </div>
+
+        <div class="row">
+          <button id="rollD20">Roll d20 (behaviour)</button>
+          <button id="rollD10">Roll d10</button>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:8px 0">
+
+        <div class="row">
+          <label class="muted" style="width:120px">Zoology Roll</label>
+          <input id="zooRoll" type="number" placeholder="d20 result" min="1" max="20" />
+        </div>
+        <div class="row">
+          <button id="applyZoo">Apply Zoology Result (DV15)</button>
+          <button id="autoZoo" class="ghost">Auto-roll Zoology</button>
+        </div>
+
+        <div class="result" id="resultBox">Ready. Set your Friendship and roll.</div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:10px 0">
+        <small class="muted">Printable: use your browser's Print to make cards. For site integration, paste this block into your page where needed.</small>
+      </aside>
+    </div>
+
+    <footer class="muted">Made for Night City — tweak flavour lines to suit your table</footer>
+  </div>
+
+  <script>
+    // Data arrays mirror the tables you provided
+    const UNNATURAL = [
+      "1 — Total stillness, blank stare.",
+      "2 — Doesn’t recognise food. Needs prompting.",
+      "3 — Mechanical, endless grooming.",
+      "4 — Ignores voice and name completely.",
+      "5 — Silent stalking of nothing.",
+      "6 — Misjudges jump like unfamiliar with its own body.",
+      "7 — Perfect predatory snap, then goes still.",
+      "8 — Unbroken, unsettling eye contact.",
+      "9 — Freezes when touched.",
+      "10 — Sleeps mid-movement in strange position.",
+      "11 — Treats reflection like prey: low silent stalk.",
+      "12 — Rhythmic tail twitch, unnatural pattern.",
+      "13 — Frozen at doorway, unable to process threshold.",
+      "14 — Fixated eating, doesn’t stop or respond.",
+      "15 — Sudden alert as if sensing predator—nothing there.",
+      "16 — Scratches at smooth floor to ‘bury’ food obsessively.",
+      "17 — Purrs mechanically when stimulated (not affection-based).",
+      "18 — Watches tech movements with predatory intensity.",
+      "19 — Perfect hunting stance at laser/light, shuts down after.",
+      "20 — Moment of almost-connection, then hesitation and stop."
+    ];
+
+    const NATURAL = [
+      "1 — Lazy stretch and slow blink.",
+      "2 — Walks to food area, expects feeding.",
+      "3 — Casual, relaxed grooming.",
+      "4 — Turns head at voice, soft chirp/blink.",
+      "5 — Play-stalks shadows/toys with clumsy energy.",
+      "6 — Confident hop or jump, tail held high.",
+      "7 — Curious pounce at moving object, looks to K-DOC.",
+      "8 — Soft eye contact followed by slow trust blink.",
+      "9 — Leans into petting with gentle purr.",
+      "10 — Chooses warm spot near K-DOC, curls comfortably.",
+      "11 — Brief mirror check, then bored dismissal.",
+      "12 — Expressive tail flicks and sways.",
+      "13 — Pauses at doorway—classic cat indecision.",
+      "14 — Eats then rubs against K-DOC before leaving.",
+      "15 — Reacts to noise, assesses, then calmly resumes.",
+      "16 — Light scratching by food bowl—habitual burying.",
+      "17 — Content, rhythmic purring when relaxed.",
+      "18 — Curious fascination with tech, playful batting.",
+      "19 — Wiggles and play-hunts laser/light enthusiastically.",
+      "20 — Seeks K-DOC, head bump, meow, or curls against."
+    ];
+
+    function fillTables(){
+      const ut = document.getElementById('unnatural-table');
+      const nt = document.getElementById('natural-table');
+      ut.innerHTML = '';
+      nt.innerHTML = '';
+      for(let i=0;i<20;i++){
+        const tr1 = document.createElement('tr');
+        const th1 = document.createElement('td'); th1.textContent = i+1; th1.style.width='36px'; th1.style.fontWeight='700';
+        const td1 = document.createElement('td'); td1.textContent = UNNATURAL[i];
+        tr1.appendChild(th1); tr1.appendChild(td1); ut.appendChild(tr1);
+
+        const tr2 = document.createElement('tr');
+        const th2 = document.createElement('td'); th2.textContent = i+1; th2.style.width='36px'; th2.style.fontWeight='700';
+        const td2 = document.createElement('td'); td2.textContent = NATURAL[i];
+        tr2.appendChild(th2); tr2.appendChild(td2); nt.appendChild(tr2);
+      }
+    }
+
+    function rnd(min,max){return Math.floor(Math.random()*(max-min+1))+min}
+
+    function showResult(text){document.getElementById('resultBox').innerHTML = text}
+
+    document.getElementById('dailyRoll').addEventListener('click', ()=>{
+      const f = parseInt(document.getElementById('friendship').value)||0;
+      const d10 = rnd(1,10);
+      const total = d10 + f;
+      const natural = total >= 15;
+      const table = natural ? NATURAL : UNNATURAL;
+      const behaviour = table[rnd(0,19)];
+      showResult(`<strong>Daily roll:</strong> 1d10 (${d10}) + Friendship (${f}) = <strong>${total}</strong> → ${natural?'<span style="color:#7efcff">Natural</span>':'<span style="color:#ffd6a5">Unnatural</span>'}<br><br><em>${behaviour}</em>`);
+    });
+
+    document.getElementById('rollD20').addEventListener('click', ()=>{
+      const res = rnd(1,20);
+      const f = parseInt(document.getElementById('friendship').value)||0;
+      const naturalTest = (rnd(1,10) + f) >= 15; // quick test to pick table
+      const table = naturalTest ? NATURAL : UNNATURAL;
+      const behaviour = table[res-1];
+      showResult(`<strong>d20:</strong> ${res} → <em>${behaviour}</em>`);
+    });
+
+    document.getElementById('rollD10').addEventListener('click', ()=>{
+      const r = rnd(1,10); showResult(`<strong>d10:</strong> ${r}`);
+    });
+
+    document.getElementById('forceUnnatural').addEventListener('click', ()=>{
+      const r = rnd(1,20); showResult(`<strong>Forced Unnatural d20:</strong> ${r} → <em>${UNNATURAL[r-1]}</em>`);
+    });
+
+    document.getElementById('applyZoo').addEventListener('click', ()=>{
+      const val = parseInt(document.getElementById('zooRoll').value);
+      if(!val){showResult('Enter a zoology d20 roll (1–20) or use Auto-roll.');return}
+      if(val >= 15){ // success
+        const inp = document.getElementById('friendship');
+        const cur = parseInt(inp.value)||0; inp.value = cur+1; showResult(`<strong>Zoology success!</strong> DV15 beaten by ${val}. Friendship increased to ${cur+1}.`);
+      } else { showResult(`<strong>Zoology failed.</strong> ${val} did not reach DV15.`); }
+    });
+
+    document.getElementById('autoZoo').addEventListener('click', ()=>{
+      const roll = rnd(1,20); document.getElementById('zooRoll').value = roll; document.getElementById('applyZoo').click();
+    });
+
+    // fill on load
+    fillTables();
+    showResult('Ready. Use the controls to roll the daily check, d20 behaviour or apply Zoology results.');
+  </script>
+</body>
+</html>
