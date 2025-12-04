@@ -1,5 +1,133 @@
 [
     {
+        "name": "Strike",
+        "damage": "1d6/2",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Brawling"
+    },
+    {
+        "name": "Kick",
+        "damage": "1d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Brawling"
+    },
+    {
+        "name": "Club",
+        "damage": "1d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Knife",
+        "damage": "1d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Sword",
+        "damage": "2d6+2",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Axe",
+        "damage": "2d6+3",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Nunchaku/Tonfa",
+        "damage": "3d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Naginata",
+        "damage": "3d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Shiriken",
+        "damage": "1d6/3",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Switchblade",
+        "damage": "1d6/2",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Brass Knuckles",
+        "damage": "1d6+2",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Sledgehammer",
+        "damage": "4d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Chainsaw",
+        "damage": "4d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Melee"
+    },
+    {
+        "name": "Kendachi Monoknife\u00AE",
+        "damage": "2d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Exotic Melee"
+    },
+    {
+        "name": "Kendachi Monokatana\u00AE",
+        "damage": "4d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Exotic Melee"
+    },
+    {
+        "name": "SPM-1 Battleglove\u2122",
+        "damage": "3d6/2d6",
+        "rof": 1,
+        "ammo": 0,
+        "isMelee": true,
+        "type": "Exotic Melee"
+    },
+    {
         "name": "BudgetArms C-13",
         "type": "Light Autopistol",
         "damage": "1d6",
@@ -21,22 +149,6 @@
         "damage": "1d6+1",
         "rof": 2,
         "ammo": 10,
-        "notes": ""
-    },
-    {
-        "name": "Colt .38 Detective",
-        "type": "Old Pistol",
-        "damage": "1d6+2",
-        "rof": 1,
-        "ammo": 6,
-        "notes": ""
-    },
-    {
-        "name": "C.O.P .357 Derringer",
-        "type": "Old Pistol",
-        "damage": "2d6+3",
-        "rof": 2,
-        "ammo": 4,
         "notes": ""
     },
     {
@@ -262,5 +374,204 @@
         "rof": 1,
         "ammo": 10,
         "notes": ""
+    },
+    {
+        "name": "S&W Combat Magnum",
+        "type": "Old Pistol",
+        "damage": "2d6+3",
+        "rof": 2,
+        "ammo": 6,
+        "notes": ""
+    },
+    {
+        "name": "Llama Commanche",
+        "type": "Old Pistol",
+        "damage": "4d6",
+        "rof": 1,
+        "ammo": 6,
+        "notes": ""
+    },
+    {
+        "name": "Colt .45 'Peacemaker'",
+        "type": "Old Pistol",
+        "damage": "2d6+2",
+        "rof": 1,
+        "ammo": 6,
+        "notes": ""
+    },
+    {
+        "name": "Colt .38 Detective",
+        "type": "Old Pistol",
+        "damage": "1d6+2",
+        "rof": 1,
+        "ammo": 6,
+        "notes": ""
+    },
+    {
+        "name": "C.O.P .357 Derringer",
+        "type": "Old Pistol",
+        "damage": "2d6+3",
+        "rof": 2,
+        "ammo": 4,
+        "notes": ""
+    },
+    {
+        "name": "Uzi",
+        "type": "Old SMG",
+        "damage": "2d6+1",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Vz61 Skorpion",
+        "type": "Old SMG",
+        "damage": "1d6",
+        "rof": 25,
+        "ammo": 20,
+        "notes": ""
+    },
+    {
+        "name": "Ingram MAC 10",
+        "type": "Old SMG",
+        "damage": "2d6+2",
+        "rof": 5,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "H&K MP5 & MP5K",
+        "type": "Old SMG",
+        "damage": "2d6+1",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Thompson M1",
+        "type": "Old SMG",
+        "damage": "2d6+2",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Bushmaster",
+        "type": "Old SMG",
+        "damage": "4d6",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "FN-FAL",
+        "type": "Old Rifle",
+        "damage": "6d6+2",
+        "rof": 21,
+        "ammo": 20,
+        "notes": ""
+    },
+    {
+        "name": "Ak-47, AKM, AKMS",
+        "type": "Old Rifle",
+        "damage": "5d6",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "M-16A & M-16A2",
+        "type": "Old Rifle",
+        "damage": "4d6",
+        "rof": 25,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Styer Aug",
+        "type": "Old Rifle",
+        "damage": "4d6",
+        "rof": 20,
+        "ammo": 30,
+        "notes": ""
+    },
+    {
+        "name": "Winchester M70",
+        "type": "Old Rifle",
+        "damage": "5d6+1",
+        "rof": 1,
+        "ammo": 5,
+        "notes": ""
+    },
+    {
+        "name": "CAWS",
+        "type": "Old Shotgun",
+        "damage": "4d6",
+        "rof": 10,
+        "ammo": 10,
+        "notes": ""
+    },
+    {
+        "name": "Scratchers",
+        "type": "Cyberweapon",
+        "damage": "1d6/2",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Implanted Fangs (Vampires)",
+        "type": "Cyberweapon",
+        "damage": "1d6/3",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Rippers",
+        "type": "Cyberweapon",
+        "damage": "1d6+3",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Wolvers",
+        "type": "Cyberweapon",
+        "damage": "3d6",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Big Knucks",
+        "type": "Cyberweapon",
+        "damage": "1d6+2",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Slice N' Dice",
+        "type": "Cyberweapon",
+        "damage": "2d6",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
+    },
+    {
+        "name": "Cybersnake",
+        "type": "Cyberweapon",
+        "damage": "1d6",
+        "rof": 1,
+        "ammo": 0,
+        "notes": "",
+        "isMelee": true
     }
 ]

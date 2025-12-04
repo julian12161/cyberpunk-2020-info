@@ -85,24 +85,73 @@ fetch('data/weapons.json')
 });
 
 function populateWeaponSelect(card) {
-  const select = card.querySelector('.weapon-select');
-  const display = card.querySelector('.weapon-damage-display');
+    const select = card.querySelector('.weapon-select');
+    const display = card.querySelector('.weapon-damage-display');
 
-  weaponData.forEach(weapon => {
-    const option = document.createElement("option");
-    option.value = weapon.name;
-    option.textContent = weapon.name;
-    select.appendChild(option);
-  });
+    select.innerHTML = ""; // clear first
 
-  select.addEventListener("change", function () {
-    const selected = weaponData.find(w => w.name === this.value);
-    if (selected) {
-      display.textContent = `Damage: ${selected.damage}, ROF: ${selected.rof}, Ammo: ${selected.ammo}`;
-    } else {
-      display.textContent = "";
+    // Group weapons by their "category"
+    const groups = {};
+    weaponData.forEach(w => {
+        const cat = w.type || "Other";
+        if (!groups[cat]) groups[cat] = [];
+        groups[cat].push(w);
+    });
+
+    // Build grouped options
+    for (const [category, weapons] of Object.entries(groups)) {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = category;
+
+        weapons.forEach(weapon => {
+            const option = document.createElement("option");
+            option.value = weapon.name;
+            option.textContent = weapon.name;
+            optgroup.appendChild(option);
+        });
+
+        select.appendChild(optgroup);
     }
-  });
+
+    // Display data when changed
+    select.addEventListener("change", function () {
+        const selected = weaponData.find(w => w.name === this.value);
+        const card = this.closest(".npc-card");
+        const body = parseInt(card.querySelector(".body").value) || 0;
+
+        if (selected) {
+            let dmg = selected.damage;
+
+            // Add melee bonus
+            if (selected.isMelee) {
+                let bonus;
+                if (body >= 15) {
+                  bonus = 8;
+                } else if (body >= 13) {
+                  bonus = 6;
+                } else if (body >= 11) {
+                  bonus = 4;
+                } else if (body === 10) {
+                  bonus = 2;
+                } else if (body >= 8) {
+                  bonus = 1;
+                } else if (body >= 5) {
+                  bonus = 0;
+                } else if (body >= 3) {
+                  bonus = -1;
+                } else {
+                  bonus = -2;
+                }
+                // const bonus = Math.floor(body / 2);
+                dmg += ` + ${bonus}`;
+                display.textContent = `Damage: ${dmg} (melee), ROF: ${selected.rof}`;
+            } else {
+                display.textContent = `Damage: ${dmg}, ROF: ${selected.rof}, Ammo: ${selected.ammo}`;
+            }
+        } else {
+            display.textContent = "";
+        }
+    });
 }
 
 function populateAllWeaponSelects() {
